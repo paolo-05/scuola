@@ -14,11 +14,11 @@ int main(){
     int res;
     char operazione;
     printf("\nInserisci il primo operando: ");
-    scanf("%d",&a);
+    scanf(" %d",&a);
     printf("\nInserisci il secondo operando: ");
-    scanf("%d",&b);
+    scanf(" %d",&b);
 
-    printf("Inserisci l'operando [+ - * /]" );
+    printf("Inserisci l'operando [+ - * /] ");
     scanf(" %c", &operazione);
 
     if (operazione=='+'){
@@ -38,7 +38,7 @@ int main(){
         printf("Divisione impossibile dividere per 0!");
     }
     else{
-        printf("Il risultato dell'operazione è: %lf", res);
+        printf("Il risultato dell'operazione e': %d", res);
     }
 
     return 0;

@@ -10,7 +10,9 @@
 #include <stdio.h>
 
 int main(){
-    int a, b, flag=0;
+    int a, b, flag;
+    #define FALSE 0;
+    #define TRUE 1;
     int res;
     char operazione;
     printf("\nInserisci il primo operando: ");
@@ -18,9 +20,12 @@ int main(){
     printf("\nInserisci il secondo operando: ");
     scanf(" %d",&b);
 
-    printf("Inserisci l'operando [+ - * /] ");
-    scanf(" %c", &operazione);
-
+    do
+    {
+        printf("Inserisci l'operando [+ - * /] ");
+        scanf(" %c", &operazione);
+    } while (operazione != '+' && operazione != '-' && operazione != '*' && operazione != '/');
+    
     if (operazione=='+'){
         res = a+b;
     }else if (operazione=='-'){
@@ -29,7 +34,7 @@ int main(){
         res = a*b;
     }else if (operazione=='/'){
         if(b == 0){
-            flag=1;
+            flag=TRUE;
         }else{
             res = a/b;
         }

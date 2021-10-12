@@ -13,13 +13,12 @@ int main(){
     {
         printf("Inserisci un numero di ore: ");
         scanf("%d",&ore);
-
         printf("\nInserisci un numero di minuti: ");
         scanf("%d",&min);
 
         printf("\nInserisci un numero di secondi: ");
         scanf("%d",&sec);
-    } while (ore<=0 || sec<=0 || min<=0);
+    } while (ore<=0 || ore>=24 || sec<=0 || sec>=60 || min<=0 || min>=60);
 
     if (ore != 0)
     {
@@ -31,4 +30,6 @@ int main(){
     sec = sec+ore+min;
 
     printf("L'orario convertito in secondi e': %d", sec);
+
+    return 0;
 }

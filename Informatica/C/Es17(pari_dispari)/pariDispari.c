@@ -6,13 +6,21 @@
 
 #include <stdio.h>
 
+void ciao(int numero)
+{
+    printf("\nciao %d\n", numero);
+}
+
 int main()
 {
     int n;
-    printf("Inserisci un numero: ");
-    scanf("%d", &n);
+    do
+    {
+        printf("Inserisci un numero: ");
+        scanf("%d", &n);
+    } while (n < 0);
 
-    while (n > 2)
+    while (n > 1)
     {
         n -= 2;
     }
@@ -24,6 +32,7 @@ int main()
     {
         printf("\nNumero dispari");
     }
+    ciao(n);
 
     return 0;
 }

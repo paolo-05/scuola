@@ -1,0 +1,19 @@
+MF = errori morfo-sintattici:
+	es. gerundio => il soggetto del gerundio deve coincidere il soggetto della proposizione principale
+		(dubito di riuscire a incontrarli, abitando in luoghi diversi)
+		 sogg=io                           sogg=noi
+
+		(facendo la doccia, lo scaldabagno si è rotto)
+	es. nuocere __a__ => ci vuole la preposizione
+		sappiamo quanto \ci\ tenga al calcio -> ci, a questa cosa è una ripetiozione.
+	
+	es. lui, sua madre, e suo fratello __,__ li vedevo tutti i giorni => inizio con un soggetto che poi abbandono (anacolugo)
+
+	es. esso è un soggetto per oggetti inanimati => per le persone utilizzo egli - lui - lei - ella
+		essi, invece va bene per tutti
+
+	es. un'ombra, un orso => gli apostrofi
+
+	es. gli Europei di calcio -> lettera maiuscola perché è un nome proprio di torneo/gara
+	    gli Unni -> nome proprio di propolo
+	    i guerrieri unni -> aggettivo, minuscola.

@@ -16,6 +16,7 @@ Le città dopo il xi secolo:
 Milano: armi;
 Venezia: cantieri;
 Firenze: tessili e banche, città costiere e commercio.
+città costiere: commercio
 
 italia al centro dell'europa, snodo fra il nord europa e africa settentrionale.
 
@@ -63,4 +64,7 @@ bottom: immigrati, lavori giornalieri -> casto
 
 Auto-Governo -> comune
 stati con leggi autonome, monete, tasse
+
+comune = governo per tutti.
+città luogo di scambio e produzione
 

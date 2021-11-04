@@ -1,0 +1,12 @@
+1. rimozione parti del case.
+2 Rimossione dei componenti
+
+COMPONENTI PC:
+ -cpu: pentium 4 intel socket 423, chache L1:8kb, L2:256, L3:0.
+ -ram: due banchi 512mb ddr 333 cl 2.5.
+ -scheda madre: asus p4s8x-x
+ -disco hdd 80gb ATA
+ -scheda video (bella): geforce fx
+ -lettore dischi (funzionante) e floppy
+ -alimentatore 3550w atx.
+ -ventole in totale: 1 (cpu fan).

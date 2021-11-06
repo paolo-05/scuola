@@ -20,6 +20,6 @@ int main()
         b = r; //scambiamo il ruolo di a e b
     }
 
-    printf("il massimo comun divisore e': %d", a); //... e quando b è (o è diventato) 0, il risultato è a
+    printf("il massimo comun divisore e': %d\n", a); //... e quando b è (o è diventato) 0, il risultato è a
     return 0;
 }

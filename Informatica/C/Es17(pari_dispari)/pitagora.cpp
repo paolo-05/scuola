@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-main()
+int main()
 {
     int i, j;
     const int n = 10;

@@ -24,7 +24,7 @@ int main() // funzione pricipale
     printf("inserisci un altro numero: ");
     scanf("%d", &b);
 
-    printf("il massimo comun divisore e': %d", mcd(a, b)); // comunico all'utente l'mcd tra a e b chiamando la funzione
+    printf("il massimo comun divisore e': %d\n", mcd(a, b)); // comunico all'utente l'mcd tra a e b chiamando la funzione
 }
 
 /* so che le funzioni non le abbiamo ancora fatte e questo tipo di approcio è recursive

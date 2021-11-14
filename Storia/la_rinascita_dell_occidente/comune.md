@@ -45,7 +45,9 @@ _governo affidato a un unico magistrato estraneo al contesto del comune_
 ---> conflitti interni <---
 
 <hr>
+
 ### **FASE 3, fase popolare**
+
 il governo è nell mani dei ceti emergenti borghesi
 
 <hr>

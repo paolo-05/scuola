@@ -1,6 +1,6 @@
 # Medio Oriente:
 
-pag 88-89 => linea blu racchiude l'Impero Bizantino
+pag 98-99 => linea blu racchiude l'Impero Bizantino
 
 Islam = religione
 <br>

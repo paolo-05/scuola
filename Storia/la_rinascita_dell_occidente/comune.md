@@ -50,15 +50,12 @@ _governo affidato a un unico magistrato estraneo al contesto del comune_
 
 il governo è nell mani dei ceti emergenti borghesi
 
-<hr>
-<br>
-
-## **collaborazione fra chiesa e comune**
+<!--## **collaborazione fra chiesa e comune**
 
 In tutti i comuni medievali nella piazza princiaple c'è sia Palazz Comunale che Cattedarle
 
 <hr>
-<br>
+<br>-->
 
 ## Fra il 1000 e 1200:
 
@@ -76,9 +73,9 @@ normanni 1091 riconquistano la Sicilia, riconquiesta spagnola, crociate (Siria e
 
 ## **RECONQUISTA SPAGNOLA**
 
-attorno all'anno mille: Califfato di Cordova, Castiglia --> nord: cristiani, sud: islamici.
+attorno all'anno mille: Califfato di Cordova, Castiglia -> nord: cristiani, sud: islamici.
 
-califfo --> capo politico arabo.
+califfo -> capo politico arabo.
 
 poco alla volta le comunità cattoliche si ripresero la parte occupata dal califato
 

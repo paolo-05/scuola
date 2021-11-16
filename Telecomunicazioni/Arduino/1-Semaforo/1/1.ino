@@ -1,60 +1,32 @@
-int vm = 2, gm = 3, rm = 4;
-int vp = 5, gp = 6, rp = 7;
-int pulsante1 = 8;
-int stato_pulsante1 = 0;
-int pulsante2 = 9;
-int stato_pulsante2 = 0;
+int verde1 = 2, giallo1 = 3, rosso1 = 4;
+int verde2 = 5, giallo2 = 6, rosso2 = 7;
 
 void setup() {
-  pinMode(vm, OUTPUT);
-  pinMode(gm, OUTPUT);
-  pinMode(rm, OUTPUT);
-  pinMode(vp, OUTPUT);
-  pinMode(gp, OUTPUT);
-  pinMode(rp, OUTPUT);
-  pinMode(pulsante1, INPUT);
-  pinMode(pulsante2, INPUT);
+  pinMode(verde1, OUTPUT);
+  pinMode(giallo1, OUTPUT);
+  pinMode(rosso1, OUTPUT);
+  pinMode(verde2, OUTPUT);
+  pinMode(giallo2, OUTPUT);
+  pinMode(rosso2, OUTPUT);
 }
 
 void loop() {
-  digitalWrite (vm, HIGH);
-  digitalWrite (rp, HIGH);
-  stato_pulsante1 = digitalRead(pulsante1);
-  stato_pulsante2 = digitalRead(pulsante2);
-  if (stato_pulsante1 == 1) {
-    delay (3500);
-    digitalWrite (gm, HIGH);
-    digitalWrite (vm, LOW);
-    delay (1500);
-    digitalWrite (gm, LOW);
-    digitalWrite (rm, HIGH);
-    digitalWrite (rp, LOW);
-    digitalWrite (vp, HIGH);
-    delay (4000);
-    digitalWrite (gp, HIGH);
-    digitalWrite (vp, LOW);
-    delay (1500);
-    digitalWrite (gp, LOW);
-    digitalWrite (rp, HIGH);
-    digitalWrite (rm, LOW);
-    digitalWrite (vm, HIGH);
-  }
-  if (stato_pulsante2 == 1) {
-    delay (3500);
-    digitalWrite (gm, HIGH);
-    digitalWrite (vm, LOW);
-    delay (1500);
-    digitalWrite (gm, LOW);
-    digitalWrite (rm, HIGH);
-    digitalWrite (rp, LOW);
-    digitalWrite (vp, HIGH);
-    delay (4000);
-    digitalWrite (gp, HIGH);
-    digitalWrite (vp, LOW);
-    delay (1500);
-    digitalWrite (gp, LOW);
-    digitalWrite (rp, HIGH);
-    digitalWrite (rm, LOW);
-    digitalWrite (vm, HIGH);
-  }
+  digitalWrite (verde1, HIGH);
+  digitalWrite (rosso2, HIGH);
+  delay (3500);
+  digitalWrite (giallo1, HIGH);
+  digitalWrite (verde1, LOW);
+  delay (1500);
+  digitalWrite (giallo1, LOW);
+  digitalWrite (rosso1, HIGH);
+  digitalWrite (rosso2, LOW);
+  digitalWrite (verde2, HIGH);
+  delay (4000);
+  digitalWrite (giallo2, HIGH);
+  digitalWrite (verde2, LOW);
+  delay (1500);
+  digitalWrite (giallo2, LOW);
+  digitalWrite (rosso2, HIGH);
+  digitalWrite (rosso1, LOW);
+  digitalWrite (verde1, HIGH);
 }

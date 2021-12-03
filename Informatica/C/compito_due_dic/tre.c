@@ -1,72 +1,63 @@
-/*
-    Autore: Paolo Bianchessi 3ic
-    Data: 29/11/2021
-    Descrizione: 
-*/
-
 #include <stdio.h>
 #include <math.h>
 
-float discriminte(float a, float b, float c)
-{
-    return (b * b) - (4 * a * c);
-}
+float a, b, c;
+double x1, x2, d;
 
-float incognitaUno(float delta, float a, float b, float c)
+void coefficienti()
 {
-    return (-b - sqrt(delta)) / (2 * a);
-}
-
-float incognitaDue(float delta, float a, float b, float c)
-{
-    return (-b + sqrt(delta)) / (2 * a);
-}
-
-int procedura()
-{
-    float a, b, c, x1, x2;
-    float delta;
-    printf("\nInserire il valore a dell'equazione: ");
+    printf("coefficiente a:\t");
     scanf("%f", &a);
-    printf("\nInserire il valore b dell'equazione: ");
+    printf("coefficiente b:\t");
     scanf("%f", &b);
-    printf("\nInserire il valore c dell'equazione: ");
+    printf("coefficiente c:\t");
     scanf("%f", &c);
-    if (a == 0)
+}
+
+void determinante()
+{
+    d = b * b - 4 * a * c;
+}
+
+void soluzioni()
+{
+    if (d < 0)
+        printf("\nnon possono esserci soluzioni reali\n");
+    else if (d == 0)
     {
-        printf("\nEquazione di primo grado");
+        x1 = (-b) / (2 * a);
+        printf("Due soluzioni reali coincidenti x1 e x2: %.2lf\n", x1);
     }
     else
     {
-        delta = discriminte(a, b, c);
-        if (delta >= 0)
-        {
-            if (delta == 0)
-            {
-                x1 = (-b) / (2 * a);
-                x2 = x1;
-            }
-            else
-            {
-                x1 = incognitaUno(delta, a, b, c);
-                x2 = incognitaDue(delta, a, b, c);
-            }
-            printf("\nI risultati sono x1 = %.2f e x2 =  %.2f ", x1, x2);
-        }
-        else
-        {
-            printf("\nL'equazione non ha valori reali");
-        }
+        x1 = (-b - sqrt(d)) / (2 * a);
+        x2 = (-b + sqrt(d)) / (2 * a);
+        printf("Due soluzioni reali distinte x1: %.2lf e x2: %.2lf\n", x1, x2);
+    }
+}
+
+void equazione_primo()
+{
+    if ((b == 0) && (c == 0))
+        printf("\nequazione indeterminata\n");
+    else if (b == 0)
+        printf("\nequazione impossibile\n");
+    else
+    {
+        x1 = -c / b;
+        printf("x: %.2lf\n", x1);
     }
 }
 
 int main()
 {
-    char scelta;
-    do
+    coefficienti();
+    if (a == 0)
+        equazione_primo();
+    else
     {
-        procedura();
-        printf("\nVuoi calcolare un'altra equazione (s-n) ?");
-        scanf(" %c", &scelta);
-    } while (scelta == 's');
+        determinante();
+        soluzioni();
+    }
+    printf("\n");
 }

@@ -31,11 +31,23 @@ Enrico IV nomina un Antipapa e cinge d'assedio Castelsantangelo dove si è asser
 Roberto il Giuscardo, Re normanno vassallo del Papa, lo libera ma muore di lì a poco.
 Muore anche Enrico IV ma lotta su chi abbia un potere maggiore tra Imp e Papa.
 
-**1122** Concordato di Worms Papa Callisto II Imperatore Enrico V > Investitura Religiosa (momento in cui viene scelto un Vescovo, fatta dal Papa) e Investitura Temporale (poere temporale, fatta dall'Imperatore)
+**1122 Concordato di Worms** Papa Callisto II Imperatore Enrico V > Investitura Religiosa (momento in cui viene scelto un Vescovo, fatta dal Papa) e Investitura Temporale (poere temporale, fatta dall'Imperatore)
 
-Due figure diverse
-Nei territori vicini a Roma prima il Papa sceglie il vescovo e lo investe e se all'Imperatore va bene come conte lo accetta;
-Nei territori tedeschi prima si scelgono i conti dall'Imperatore, e il Papa se gli va bene come Vescovo lo nomina come tale.
+Due momenti separati e due autorità diverse:
+
+- Nei territori vicini a Roma prima il Papa sceglie il vescovo e lo investe e se all'Imperatore va bene come conte lo accetta;
+- Nei territori tedeschi prima si scelgono i conti dall'Imperatore, e il Papa se gli va bene come Vescovo lo nomina come tale.
 
 Vicenda molto importante per il monento storico;
 Il sovrano cristiano doveva obbedire al Papa.
+
+# La crisi dell'Impero
+
+Alla morte di Enrico V lotta alla successione Imperiale
+
+lotta fra due famiglie:
+
+- **Welf** (Guelfi) famiglia tedesca della baviera più proensi a collaborare con il Papa nell'ottica del concordato;
+- Waiblingen (Ghibellini), al contrario essi non volevano collaboare con il Pontefice.
+
+Federico I di Svevia, detto Barbarossa

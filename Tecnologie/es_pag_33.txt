@@ -1,0 +1,4 @@
+in base 8 333 = 219 in base 10
+	  777 = 511
+	  4567 = 2423
+	  5678 non è in base ottale

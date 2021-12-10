@@ -52,6 +52,7 @@ int main()
     {
         printf("\nIl primo anno e' bisestile\n");
     }
+
     else
     {
         printf("Il primo anno non e' bisestile\n");

@@ -1,24 +1,26 @@
 /*
     Autore: Paolo Bianchessi 3ic
     Data: 7.10.2021
-    Descrizione: STAGIONI: stampare la stagione in base a giorno e mese primavera 21/3 al 20/6 
+    Descrizione: STAGIONI: stampare la stagione in base a giorno e mese primavera 21/3 al 20/6
                 estate 21/6 al 22/9 autunno dal 23/09 al 20/12 inverno dal 21/12 al 20/3
 */
 
 #include <stdio.h>
 
-int main(){
-    int giorno,mese;
+int main()
+{
+    int giorno, mese;
     do
     {
         printf("Inserisci un mese valido: ");
         scanf("%d", &mese);
-    } while (mese<1 || mese>12);
-    
+    } while (mese < 1 || mese > 12);
+
     do
-    {   printf("Inserisci un giorno valido: ");
-        scanf("%d",&giorno);
-    } while (giorno<1 || giorno>31);
+    {
+        printf("Inserisci un giorno valido: ");
+        scanf("%d", &giorno);
+    } while (giorno < 1 || giorno > 31);
 
     switch (mese)
     {
@@ -29,10 +31,12 @@ int main(){
         printf("\nInverno");
         break;
     case 3:
-        if (giorno>=21)
+        if (giorno >= 21)
         {
             printf("\nPrimavera");
-        }else{
+        }
+        else
+        {
             printf("\nInverno");
         }
         break;
@@ -43,10 +47,12 @@ int main(){
         printf("\nPrimavera");
         break;
     case 6:
-        if (giorno>=21)
+        if (giorno >= 21)
         {
             printf("\nEstate");
-        }else{
+        }
+        else
+        {
             printf("Primavera");
         }
         break;
@@ -57,10 +63,12 @@ int main(){
         printf("\nEstate");
         break;
     case 9:
-        if (giorno>=21)
+        if (giorno >= 21)
         {
             printf("\nAutunno");
-        }else{
+        }
+        else
+        {
             printf("\nEstate");
         }
         break;
@@ -71,10 +79,12 @@ int main(){
         printf("\nAutunno");
         break;
     case 12:
-        if (giorno>=21)
+        if (giorno >= 21)
         {
             printf("\nInverno");
-        }else{
+        }
+        else
+        {
             printf("\nAutunno");
         }
         break;
@@ -83,6 +93,6 @@ int main(){
         return 1;
         break;
     }
-    
+
     return 0;
 }

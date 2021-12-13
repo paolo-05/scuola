@@ -77,11 +77,11 @@ int confrontodate(int gg1, int mm1, int aa1, int gg2, int mm2, int aa2)
             else
                 return 2;
 }
-int acquisiciData(int *gg, int *mm, int *aa)
+int acquisiciData(int *gg, int *mm, int *aa, int volte)
 {
     do
     {
-        printf("\ninserisci una data(gg/mm/aa): ");
+        printf("\ninserisci la %d^ data(gg/mm/aa): ", volte);
         scanf("%d/%d/%d", &*gg, &*mm, &*aa);
     } while (controllodata(&*gg, &*mm, &*aa) == 0);
     return (bisestile(&*aa) == 1) ? 1 : 0;
@@ -91,8 +91,10 @@ int main(void)
 {
     int gg1, gg2, mm1, mm2, aa1, aa2;
     int confdat;
-    (acquisiciData(&gg1, &mm1, &aa1) == 1) ? printf("\nL'anno %d e' bisestile", aa1) : printf("\nL'anno %d non e' bisestile", aa1);
-    (acquisiciData(&gg2, &mm2, &aa2) == 1) ? printf("\nL'anno %d e' bisestile", aa2) : printf("\nL'anno %d non e' bisestile", aa2);
+    int volte = 1;
+    (acquisiciData(&gg1, &mm1, &aa1, volte) == 1) ? printf("\nL'anno %d e' bisestile", aa1) : printf("\nL'anno %d non e' bisestile", aa1);
+    volte++;
+    (acquisiciData(&gg2, &mm2, &aa2, volte) == 1) ? printf("\nL'anno %d e' bisestile", aa2) : printf("\nL'anno %d non e' bisestile", aa2);
     confdat = confrontodate(gg1, mm1, aa1, gg2, mm2, aa2);
     (confdat == 0)
         ? printf("\nLa seconda data (%d/%d/%d) e' maggiore della prima (%d/%d/%d)\n", gg2, mm2, aa2, gg1, mm1, aa1)

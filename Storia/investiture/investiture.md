@@ -51,3 +51,23 @@ lotta fra due famiglie:
 - Waiblingen (Ghibellini), al contrario essi non volevano collaboare con il Pontefice.
 
 Federico I di Svevia, detto Barbarossa
+
+# Inocenzo III
+
+appartiene alla famiglia SEGNI, studia in università prestigiose (Parigi: teologia, Bologna: diritto)
+
+Riforma della Chiesa, ritornare a sane abitudini che la chiesa aveva perso, semplificando moltissimo
+
+1. Concilio, emergono precisazioi per tutti i cristiani, invita tutti i cristiani a stara attenti agli
+   eretici. Inquisizione = ricerca si cerca di stabilire attraverso processi se uno è eretico o meno.
+2. DE CONTEMPU MUNDI disprezzo del mondo, opera in cui il pontefice spiega che i cristiani
+   debbano slegarsi dalla vita agiata, per ricordarsi dell'amore di Dio.
+   La cheisa deve difendere la cristianità -> IV crociata (fallimento)
+
+Lotta contro le eresie:
+
+- Pietro Valdo (Valdesi), predicava un vita di estrema povertà, inizialmete P.V. viene espulso dalla città di Lione, cominciò a dire che la gerarchia della chiesa non ha nessun valore. Diffonde una dottrina che è contraria a quella della chiesa.
+- Catari (Puri in latino) o Albigesi (Albi sud Francia), erano convinti che il mondo fosse generato da due Divinità, una maligna che ha generato tutti i beni materiale, una buona che ha generato le anime. Forma di Dualismo, la creazione per loro è cosa cattiva, molto diffusa.
+  => Innocenzo, Crociata contro gli Albigesi, 1208, eserciti dei feudatari.
+  => altro strumento **Ordini Mendicanti**, persone dedicate alla vita religiosa, essi non lavorano e vivono di carità
+  San Domenico fonda l'ordine dei domenicani per fare "Catechismo" al popolo

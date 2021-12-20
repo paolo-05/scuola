@@ -1,18 +1,18 @@
 /*
     Autore: Paolo Bianchessi 3ic
     Data: 17/12/2021
-    Descrizione: 
+    Descrizione:
 */
 
 #include <stdio.h>
 void scan_car(char c, int *pv, int *pc, int *pd, int *pw, int *po)
 {
-    if (c == 'A' || c == 'E' || c == 'I' || c == 'O' || c == 'U')
+    if (c == 'A' || c == 'E' || c == 'I' || c == 'O' || c == 'U' || c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u')
     {
         (*pv)++;
         return;
     }
-    if (c >= 'A' && c <= 'Z')
+    if (c >= 'A' && c <= 'Z' || c >= 'a' && c <= 'z')
     {
         (*pc)++;
         return;
@@ -29,25 +29,28 @@ void scan_car(char c, int *pv, int *pc, int *pd, int *pw, int *po)
     }
     (*po)++;
 }
-
+void pulisciBuffer()
+{
+    while (getchar() != '\n')
+        ;
+}
 int main()
 {
     char scelta;
-    char lettere[89];
+    char car;
     int i = 0;
-    int vocaliC, consonantiC, cifreC, spaziVoutiC, altriCarC;
+    int vocaliC = 0, consonantiC = 0, cifreC = 0, spaziVoutiC = 0, altriCarC = 0;
     do
     {
         printf("Inserisci il carattere: ");
-        scanf(" %c", &lettere[i]);
+        scanf("%c", &car);
+        pulisciBuffer();
         i++;
-        printf("\nContinuare? (s/n) ");
-        scanf(" %c", &scelta);
+        scan_car(car, &vocaliC, &consonantiC, &cifreC, &spaziVoutiC, &altriCarC);
+        printf("\nContinuare? (s/n)");
+        scanf("%c", &scelta);
+        pulisciBuffer();
     } while (scelta == 's');
-    for (int k = 0; k < lettere[k]; k++)
-    {
-        /* code */
-    }
 
     printf("Num. vocali: %d\n", vocaliC);
     printf("Num. consonanti: %d\n", consonantiC);

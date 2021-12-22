@@ -71,3 +71,16 @@ Lotta contro le eresie:
   => Innocenzo, Crociata contro gli Albigesi, 1208, eserciti dei feudatari.
   => altro strumento **Ordini Mendicanti**, persone dedicate alla vita religiosa, essi non lavorano e vivono di carità
   San Domenico fonda l'ordine dei domenicani per fare "Catechismo" al popolo
+
+La sua idea politica **"Teocrazia"**, _teos = dio, crazia = governo_ => governo di Dio
+Nel 1198 diventa Papa e scrive una lettera dove spiega la sua idea politica chiamata Sole e Luna
+Il papa si occupa della parte più importante in noi, l'anima, invece l'imperatore si occupa della parte corporale.
+
+Idee chiare e messe in pratica.
+
+Giovanni Senza Terre no mai
+Prima del 1200 in Francia esistevano due grandi poteri
+1214 succedono cose.
+L'impero viene assegnato ai potenti, e in inghilterra anche lì ci sono cose che accadono
+
+Magna Carta Libertà

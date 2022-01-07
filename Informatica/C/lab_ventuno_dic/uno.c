@@ -1,12 +1,14 @@
 /*
     Autore: Paolo Bianchessi 3ic
     Data: 21/12/2021
-    Descrizione: 
+    Descrizione:
 */
 
 #include <stdio.h>
 #include <time.h>
 #include <stdlib.h>
+
+#define ESTRAZIONI 30
 
 int isEven(int n)
 {
@@ -16,6 +18,7 @@ int isEven(int n)
     }
     return 0;
 }
+
 void stampa(int *array, int nElementi)
 {
     for (int i = 0; i < nElementi; i++)
@@ -26,8 +29,8 @@ void stampa(int *array, int nElementi)
 int main()
 {
     srand((long)time(NULL));
-    int num, pariC = 0, dispariC = 0, pari[30], dispari[30];
-    for (int i = 0; i < 30; i++)
+    int num, pariC = 0, dispariC = 0, pari[ESTRAZIONI], dispari[ESTRAZIONI];
+    for (int i = 0; i < ESTRAZIONI; i++)
     {
         num = rand() + 1;
         if (isEven(num))

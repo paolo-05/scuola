@@ -1,7 +1,7 @@
 /*
     Autore: Paolo Bianchessi 3ic
     Data: 21/12/2021
-    Descrizione: 
+    Descrizione:
 */
 
 #include <stdio.h>
@@ -14,7 +14,7 @@ int main()
 
     int num, faccie[91] = {0};
 
-    for (int i = 0; i < 900; i++)
+    for (int i = 0; i < 200; i++)
     {
         num = rand() % 90 + 1;
         faccie[num]++;

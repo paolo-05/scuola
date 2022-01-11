@@ -48,7 +48,7 @@ Alla morte di Enrico V lotta alla successione Imperiale
 lotta fra due famiglie:
 
 - **Welf** (Guelfi) famiglia tedesca della baviera più proensi a collaborare con il Papa nell'ottica del concordato;
-- Waiblingen (Ghibellini), al contrario essi non volevano collaboare con il Pontefice.
+- **Waiblingen** (Ghibellini), al contrario essi non volevano collaboare con il Pontefice.
 
 Federico I di Svevia, detto Barbarossa
 
@@ -84,3 +84,13 @@ Prima del 1200 in Francia esistevano due grandi poteri
 L'impero viene assegnato ai potenti, e in inghilterra anche lì ci sono cose che accadono
 
 Magna Carta Libertà
+
+# Il sole e la luna
+
+1. 800 = istituzione Sacro Romano Impero, l'Imp. ha bisogno del Papa per essere legittimato, i due sovrani dovrebbero avere ruoli diversi:
+   - Politico - militare, su tutto il popolo, da parte dell'Imp.
+   - Spirituale su tutti i cristiani da parte del Papa.
+2. 962 Privilegio di Ottone, l'Imperatore poteva nominare i vescovi conti e controllare l'elezione del Papa e dei vescovi.
+3. 1059 Concilio Lateranense = elezione del Papa autonoma rispetto al volere dell'Imperatore.
+4. Lotta per le investiture (Enrico IV e Gregorio VII) > concordato di Worms
+5. Teocrazia di Innocenzo III

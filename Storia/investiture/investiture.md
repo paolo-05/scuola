@@ -1,6 +1,6 @@
 # Lotta per le investiture
 
-L'investitura è una cerimonia che coinvolge il feudatario e il beneficiario dove
+L'investitura è una cerimonia che coinvolge il feudatario e il beneficiario
 
 1059 Concilio Lateranense
 1073 il monaco **Ildebrando di Soana** diventa facendosi chiamare Papa Gregorio VII e vuole riformare la chiesa, ritornare alla forma, perché c'era la corruzione / simonia (_Simonia = traffico di cariche ecclesiastiche_)

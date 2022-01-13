@@ -2,9 +2,9 @@ Es 1:
 
 1. study
 2. speak
-3. drive
+3. driving
 4. have
-5. live
+5. living
 6. get
 7. like
 8. see
@@ -14,13 +14,13 @@ Es 1:
 
 Es 2:
 
-1. I was used to have
+1. I used to have
 4. we were used to wear
 6. Our parent weren't used to spend
 
 Es 3:
 
-1. Was used to live
+1. used to live
 2. didn't used to go out
 3. used to be
 4. used to have
@@ -70,11 +70,11 @@ Es 6:
 
 Es 7:
 
-1. mostest
+1. more
 2. as good marks as
 3. better
 4. prettier
-5. wrost
+5. worse
 
 Es 8:
 

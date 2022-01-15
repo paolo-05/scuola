@@ -34,7 +34,7 @@ int main()
             printf("\nErrore: il numero dev'essere compreso fra 1 e 200\n");
         }
 
-    } while (nVal > MAX_VAL);
+    } while (nVal > MAX_VAL || nVal < 0);
 
     for (int i = 0; i < nVal; i++)
     {
@@ -50,6 +50,7 @@ int main()
         } while (valori[i] < 0);
     }
     stampaIstogramma(valori, nVal);
+
     printf("\n");
     return 0;
 }

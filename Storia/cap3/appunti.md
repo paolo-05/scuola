@@ -28,3 +28,18 @@ Nel 1300-1400, nella costa Adriatica, venezia continuava a dominare tutti i traf
 - Enerico VII / Arrigo VII, decide di scendere in Italia per chiarire i conflitti tra Guelfi e Ghibellini, convincendosi dell'importanza del potere universale, Dante ci sperò un po' ma, Arrigo muore nel 1313, portando con sé la speranza
 
 Imperatore Carlo VI, nel 1356, emana un documento **Bolla d'Ora**, con questo doc si stabilisce che l'imp sarà una carica elettiva, e che ad eleggerlo avranno diritto 7 principi, 3 vescovi e 4 laici, tutti provengono di area tedesca.
+
+# Crisi del 1300
+
+- Carestie, crollo demografico
+- Guerre
+- Pandemia, **Peste**, 1346 - 1351, ciclicamente si è presentata ogni 8 - 10 anni, proviene dall'est Europa e si diffonde ovunque nel continente
+  - contagiosa
+  - dovuta a un batterio chiamato yersinia pentis
+  - parte dal ratto, pulce, uomo, uomo
+  - convinzioni del tempo: si cercava il _capro espiatorio_, una persona da sacrificare che ha commesso un peccato che va punita
+    - lebrosi
+    - malati
+    - ebrei
+      - accusati di deicidio, uccisione di Dio
+      - usurai per conto dello stato

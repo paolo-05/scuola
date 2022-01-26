@@ -37,9 +37,17 @@ Imperatore Carlo VI, nel 1356, emana un documento **Bolla d'Ora**, con questo do
   - contagiosa
   - dovuta a un batterio chiamato yersinia pentis
   - parte dal ratto, pulce, uomo, uomo
-  - convinzioni del tempo: si cercava il _capro espiatorio_, una persona da sacrificare che ha commesso un peccato che va punita
-    - lebrosi
-    - malati
-    - ebrei
-      - accusati di deicidio, uccisione di Dio
-      - usurai per conto dello stato
+  - convinzioni del tempo: si cercava il _capro espiatorio_, una persona da sacrificare che ha commesso un peccato che va punita - lebrosi - malati - ebrei - accusati di deicidio, uccisione di Dio - usurai per conto dello stato - concorrenti in affari e creditori
+    -->
+- **pogrom**, parola russa che significa strage di ebrei, ciclicamente nella storia successe molte volte, ed alcuni sovrani e religiosi tolleravano queste cose, nonostante vennere vietati da una bolla bopapale nel 1348 a fronte delle stragi che si stavno verificando.
+  ### parole chiave
+- **Antigiudaismo**= persecuzioni di ebrei per motivi religiosi (deicidio),
+
+- **antisemitismo** = persecuzioni ebrei per motivi razziali
+
+## Conseguenze Crisi
+
+- crollo demografico, drastico
+  - anno 1000, 40 mln di abitanti nell'europa
+  - 1200/1300 80 mln
+  - dopo la peste (1350 circa) 54mln

@@ -1,7 +1,7 @@
 /*
     Autore: Paolo Bianchessi 3ic
     Data: 19/10/2021
-    Descrizione: 
+    Descrizione:
 */
 
 #include <stdio.h>
@@ -24,13 +24,13 @@ int main()
     } while (mese <= 1 && mese >= 12);
     switch (mese)
     {
-    case 1: //gennaio
+    case 1: // gennaio
         giorno = MESE - giorno;
         rimanenti = ANNO - giorno;
         break;
-    case 2: //febbraio
+    case 2: // febbraio
         giorno = 28 - giorno;
-        rimanenti ANNO - giorno;
+        rimanenti = ANNO - giorno;
     default:
         break;
     }

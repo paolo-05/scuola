@@ -17,3 +17,11 @@ MF = errori morfo-sintattici:
 	es. gli Europei di calcio -> lettera maiuscola perché è un nome proprio di torneo/gara
 	    gli Unni -> nome proprio di propolo
 	    i guerrieri unni -> aggettivo, minuscola.
+
+ABUSO DI ESPRESSIONI
+
+- nel mondo d'oggi
+- oggigiorno
+- al giorno d'oggi
+
+- persone

@@ -51,3 +51,40 @@ Imperatore Carlo VI, nel 1356, emana un documento **Bolla d'Ora**, con questo do
   - anno 1000, 40 mln di abitanti nell'europa
   - 1200/1300 80 mln
   - dopo la peste (1350 circa) 54mln
+
+# Economia dopo la peste [pag 187]
+
+crollo demografico, causato dalla peste
+
+diminiuzione domanda prodotti, produzione di cereali cala.
+calo deii prezzi, i produttori vanni in crisi
+
+ristrutturazione dell'Economia curtense:
+
+- riconversione della produzione
+  - colture specializzate (vite, olio, gelso (seta) )
+    - coltivazioni rischiose per affittuari e mezzadri
+  - inghlilterra e fiandre, allevamenti di pecore
+  - privazione di mezzi fondamentali per i contadini più poveri
+- mezzadria e affitti
+
+  - il contadino che non è in grando di pagare lascia la terra
+
+  ---> **AUMENTO DELLA POVERTA'**
+
+### Distribuzione delle popolazione e della richhezza a Firenze 1427 (pag 194)
+
+- 10% popolazione = 68% richhezza
+- 30% = 27%
+- 60% = 5%
+
+borghesia e nobiltà non fanno cessare il commercio, il settore manufattoriero si diffonde molto e si sviluppano attività finanziarie di privati e monarchiche
+
+Aumento dei poveri soprattutto nelle città
+
+**Rivolte**
+
+1. Francia (in guerra contro l'UK), assaltano territori e castelli dei feudatari, morirono circa 7000 nobili ma 20k contadini fanno la stessa fine.
+2. Fiandre, rivolta dei salariati del settore tessile
+3. Inghilterra, contadini e salariati si abbracciarono a un movimento eretico
+4. Firenze, capitale dell'artigianato in Italia, 1378 rivolta dei Ciompi, pettinavano la lana, soffocata nel sangue

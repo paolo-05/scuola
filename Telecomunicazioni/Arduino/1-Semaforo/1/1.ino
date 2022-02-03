@@ -1,32 +1,67 @@
-int verde1 = 2, giallo1 = 3, rosso1 = 4;
-int verde2 = 5, giallo2 = 6, rosso2 = 7;
+int carRed = 4;
+int carYellow = 3;
+int carGreen = 2;
+int carRed1 = 7;
+int carYel1 = 6;
+int carGreen1 = 5;
+int pedRed = 13;
+int pedYel = 12;
+int pedGreen = 11;
+int button = 9;
+int crossTime = 5000;
+unsigned long changeTime;
 
 void setup() {
-  pinMode(verde1, OUTPUT);
-  pinMode(giallo1, OUTPUT);
-  pinMode(rosso1, OUTPUT);
-  pinMode(verde2, OUTPUT);
-  pinMode(giallo2, OUTPUT);
-  pinMode(rosso2, OUTPUT);
+  pinMode(carRed, OUTPUT);
+  pinMode(carYellow, OUTPUT);
+  pinMode(carGreen, OUTPUT);
+  pinMode(pedRed, OUTPUT);
+  pinMode(pedYel, OUTPUT);
+  pinMode(pedGreen, OUTPUT);
+  pinMode(button, INPUT);
+  digitalWrite(carGreen, HIGH);
+  digitalWrite(pedRed, HIGH);
 }
 
 void loop() {
-  digitalWrite (verde1, HIGH);
-  digitalWrite (rosso2, HIGH);
-  delay (3500);
-  digitalWrite (giallo1, HIGH);
-  digitalWrite (verde1, LOW);
-  delay (1500);
-  digitalWrite (giallo1, LOW);
-  digitalWrite (rosso1, HIGH);
-  digitalWrite (rosso2, LOW);
-  digitalWrite (verde2, HIGH);
-  delay (4000);
-  digitalWrite (giallo2, HIGH);
-  digitalWrite (verde2, LOW);
-  delay (1500);
-  digitalWrite (giallo2, LOW);
-  digitalWrite (rosso2, HIGH);
-  digitalWrite (rosso1, LOW);
-  digitalWrite (verde1, HIGH);
+  int state = digitalRead(button);
+  if ((state == HIGH) && ((millis() - changeTime)) > 5000) {
+    changeLights();
+  }
+  else{
+
+  }
+}
+
+void changeLights() {
+  int x;
+  digitalWrite(carGreen, LOW); // green off
+  digitalWrite(carGreen1, LOW);
+  digitalWrite(carYellow, HIGH); // yellow on
+  digitalWrite(, HIGH);
+  delay(2000); // wait 2 seconds
+
+  digitalWrite(carYellow, LOW); // yellow off
+  digitalWrite(carRed, HIGH); // red on
+  delay(1000); // wait 1 second till its safe
+
+  digitalWrite(pedRed, LOW); // ped red off
+  digitalWrite(pedGreen, HIGH); // ped green on
+  delay(crossTime); // wait for preset time period
+  digitalWrite(pedGreen, LOW);
+  digitalWrite(pedYel, HIGH);
+  delay(1000);
+  digitalWrite(pedYel, LOW);
+  
+  digitalWrite(pedRed, HIGH);
+  delay(500);
+
+  //digitalWrite(carYellow, HIGH); // yellow on
+  digitalWrite(carRed, LOW); //
+  delay(1000);
+
+  digitalWrite(carGreen, HIGH);
+  digitalWrite(carYellow, LOW);
+
+  changeTime = millis();
 }

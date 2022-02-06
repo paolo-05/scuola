@@ -27,7 +27,7 @@ int main()
     // visualizza(stringaA);
     // visualizza(stringaB);
 
-    if (confronto(stringaA, stringaB) == 1)
+    if (confronto(stringaA, stringaB))
     {
         printf("\nle parole sono l'una l'anagramma dell'altra");
     }
@@ -76,13 +76,7 @@ int confronto(char strA[], char strB[])
         {
             return 1;
         }
-        else
-        {
-            return 0;
-        }
+        return 1;
     }
-    else
-    {
-        return 0;
-    }
+    return 0;
 }

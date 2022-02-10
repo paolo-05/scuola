@@ -92,6 +92,7 @@ void prompt()
 {
     printf("\ntraduttore>");
 }
+
 void ing(char word[])
 {
     int traduzione = 0;
@@ -103,6 +104,7 @@ void ing(char word[])
     else
         printf("Non sono riuscito a trovare la parola.\n");
 }
+
 void ita(char parola[])
 {
     int traduzione = 0;

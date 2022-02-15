@@ -8,7 +8,7 @@
 #include <string.h>
 
 #define WS 20
-#define L 20
+#define L 15
 const char ingC[] = "ing";
 const char itaC[] = "ita";
 const char helpC[] = "help";
@@ -50,16 +50,16 @@ char ingWs[WS][L] = {
     "keyboard"
     "chair",
     "folder",
-    "dog"
+    "dog",
     "cat",
     "music",
     "work",
     "water",
     "sand",
-    "to eat",
-    "to sleep",
-    "to cook",
-    "to search",
+    "eat",
+    "sleep",
+    "cook",
+    "search",
     "book",
     "backpack",
     "pants",
@@ -78,10 +78,12 @@ int main()
             ing(argomento);
         else if (strcmp(comando, itaC) == 0)
             ita(argomento);
-        else if (strcmp(comando, helpC) >= 0 || argomento == NULL) // in questo modo anche in assenza di argomenti
-            help();                                                // per i comandi principali si stampa l'help
-        else
+        else if (strcmp(comando, helpC) == 0)
+            help();
+        else if (strcmp(comando, "exit") == 0)
             fine = 1;
+        else
+            printf("\nErrore di sintassi.\n");
 
     } while (!fine);
 
@@ -95,26 +97,39 @@ void prompt()
 
 void ing(char word[])
 {
-    int traduzione = 0;
-    for (int i = 0; i < WS; i++)
+    int trovato = 0;
+    for (int i = 0; i < WS && !trovato; i++)
+    {
         if (strcmp(word, ingWs[i]) == 0)
-            traduzione = i;
-    if (traduzione)
-        printf("traduzione: %s\n", itaWs[traduzione]);
-    else
-        printf("Non sono riuscito a trovare la parola.\n");
+        {
+            printf("traduzione: %s\n", itaWs[i]);
+            trovato = 1;
+        }
+    }
+    printf("I didn't find the word.\n");
 }
 
 void ita(char parola[])
 {
-    int traduzione = 0;
-    for (int j = 0; j < WS; j++)
-        if (strcmp(parola, itaWs[j]) == 0)
-            traduzione = j;
-    if (traduzione)
-        printf("traduzione: %s\n", ingWs[traduzione]);
-    else
-        printf("Non sono riuscito a trovare la parola.\n");
+    int trovato = 0;
+    for (int i = 0; i < WS && !trovato; i++)
+    {
+        for (int j = 0; j < strlen(parola); j++)
+        {
+            printf("%c", parola[j]);
+        }
+        for (int k = 0; k < strlen(itaWs[i]); k++)
+        {
+            printf("%c", parola[k]);
+        }
+
+        if (strcmp(parola, itaWs[i]) == 0)
+        {
+            printf("traduzione: %s\n", ingWs[i]);
+            trovato = 1;
+        }
+    }
+    printf("Non sono riuscito a trovare la parola.\n");
 }
 
 void help()

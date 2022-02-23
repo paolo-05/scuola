@@ -15,6 +15,8 @@ char attori[DIM][LEN];
 
 void inserisciAttore(int);
 int cercaPresenza(char *);
+void ordinaAttori();
+void visualizza();
 
 int main()
 {
@@ -26,6 +28,10 @@ int main()
         inserisciAttore(i);
     }
     printf("\nBene, hai riempito il cast per il film.\n");
+    printf("Elenco ordinato del cast: \n");
+    ordinaAttori();
+    visualizza();
+
     while (c)
     {
         printf("\ncerca: ");
@@ -44,7 +50,7 @@ int main()
 
 void inserisciAttore(int pos)
 {
-    printf("Attore %d: ", pos);
+    printf("Attore %d: ", pos + 1);
     fgets(attori[pos], LEN, stdin);
 }
 
@@ -58,4 +64,32 @@ int cercaPresenza(char attore[])
         }
     }
     return 0;
+}
+
+void ordinaAttori()
+{
+
+    int i;
+    char t[LEN];
+    int scambi = 0;
+    do
+    {
+        scambi = 0;
+        for (i = 0; i < DIM - 1; i++)
+            if (strcmp(attori[i], attori[i + 1]) > 0)
+            {
+                strcpy(t, attori[i]);
+                strcpy(attori[i], attori[i + 1]);
+                strcpy(attori[i + 1], t);
+                scambi = 1;
+            }
+    } while (scambi == 1);
+}
+
+void visualizza()
+{
+    for (int i = 0; i < DIM; i++)
+    {
+        printf("Attore %d: %s", i + 1, attori[i]);
+    }
 }

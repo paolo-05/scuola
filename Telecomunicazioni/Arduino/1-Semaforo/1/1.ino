@@ -1,67 +1,60 @@
-int carRed = 4;
-int carYellow = 3;
-int carGreen = 2;
-int carRed1 = 7;
-int carYel1 = 6;
-int carGreen1 = 5;
-int pedRed = 13;
-int pedYel = 12;
-int pedGreen = 11;
-int button = 9;
-int crossTime = 5000;
-unsigned long changeTime;
+#define VERDE 0
+#define GIALLO 1
+#define ROSSO 2
 
-void setup() {
-  pinMode(carRed, OUTPUT);
-  pinMode(carYellow, OUTPUT);
-  pinMode(carGreen, OUTPUT);
-  pinMode(pedRed, OUTPUT);
-  pinMode(pedYel, OUTPUT);
-  pinMode(pedGreen, OUTPUT);
-  pinMode(button, INPUT);
-  digitalWrite(carGreen, HIGH);
-  digitalWrite(pedRed, HIGH);
+int semaforoPrincipale[] = { 2, 3, 4 };
+int semaforo2[] = {5, 6, 7};
+int semaforoPedonale[] = { 11, 12, 13 };
+int ritardo = 2000;
+int pulsantePin = 9;
+int attesaChiamata = 3000;
+
+void setup(){
+  for(int i = 0; i < 3; i++){
+    pinMode(semaforoPrincipale[i], OUTPUT);
+    pinMode(semaforo2[i], OUTPUT);
+    pinMode(semaforoPedonale[i], OUTPUT);
+  }
+  pinMode(pulsantePin, INPUT);
+  cambiaLuce(semaforoPedonale, ROSSO);
+  cambiaLuce(semaforoPrincipale, VERDE);
+  cambiaLuce(semaforo2, ROSSO);
 }
 
-void loop() {
-  int state = digitalRead(button);
-  if ((state == HIGH) && ((millis() - changeTime)) > 5000) {
-    changeLights();
+void loop(){
+  if(digitalRead(pulsantePin) == HIGH){
+    delay(attesaChiamata);
+    cambiaLuce(semaforoPrincipale, GIALLO);
+    delay(ritardo/2);
+    cambiaLuce(semaforoPrincipale, ROSSO);
+    cambiaLuce(semaforo2, ROSSO);
+    cambiaLuce(semaforoPedonale, VERDE);
+    delay(ritardo);
+    cambiaLuce(semaforoPedonale, GIALLO);
+    delay(ritardo/2);
+    cambiaLuce(semaforoPedonale, ROSSO);
+    cambiaLuce(semaforoPrincipale, VERDE);
   }
   else{
-
+    cambiaLuce(semaforo2, ROSSO);
+  cambiaLuce(semaforoPrincipale, VERDE);
+  delay(ritardo);
+  cambiaLuce(semaforoPrincipale, GIALLO);
+  delay(ritardo/2);
+  cambiaLuce(semaforoPrincipale, ROSSO);
+  cambiaLuce(semaforo2, VERDE);
+  delay(ritardo);
+  cambiaLuce(semaforo2, GIALLO);
+  delay(ritardo/2);
   }
 }
 
-void changeLights() {
-  int x;
-  digitalWrite(carGreen, LOW); // green off
-  digitalWrite(carGreen1, LOW);
-  digitalWrite(carYellow, HIGH); // yellow on
-  digitalWrite(, HIGH);
-  delay(2000); // wait 2 seconds
-
-  digitalWrite(carYellow, LOW); // yellow off
-  digitalWrite(carRed, HIGH); // red on
-  delay(1000); // wait 1 second till its safe
-
-  digitalWrite(pedRed, LOW); // ped red off
-  digitalWrite(pedGreen, HIGH); // ped green on
-  delay(crossTime); // wait for preset time period
-  digitalWrite(pedGreen, LOW);
-  digitalWrite(pedYel, HIGH);
-  delay(1000);
-  digitalWrite(pedYel, LOW);
-  
-  digitalWrite(pedRed, HIGH);
-  delay(500);
-
-  //digitalWrite(carYellow, HIGH); // yellow on
-  digitalWrite(carRed, LOW); //
-  delay(1000);
-
-  digitalWrite(carGreen, HIGH);
-  digitalWrite(carYellow, LOW);
-
-  changeTime = millis();
+void cambiaLuce(int semaforo[], int luce){
+  for(int i = 0; i < 3; i++){
+    if(i == luce){
+      digitalWrite(semaforo[i], HIGH);
+    }else{
+      digitalWrite(semaforo[i], LOW);
+    }
+  }
 }

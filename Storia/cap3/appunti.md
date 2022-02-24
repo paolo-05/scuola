@@ -88,3 +88,50 @@ Aumento dei poveri soprattutto nelle città
 2. Fiandre, rivolta dei salariati del settore tessile
 3. Inghilterra, contadini e salariati si abbracciarono a un movimento eretico
 4. Firenze, capitale dell'artigianato in Italia, 1378 rivolta dei Ciompi, pettinavano la lana, soffocata nel sangue
+
+Dal 1300 in poi la funzione del sovrano cresce e punta a un potere assolouto, _absolutus = libero, sciolto_, comincia un lotta fra i privilegi dei nobili e la ricerca del potere assoluto.
+
+Il sovrano cerca di controllare più realtà possibili, controllano anche la chiesa "nazionale" (che vivono sul loro territorio),
+creazione di apparato burrocratico, per il controllo delle leggi
+Esercito sempre disponibile per il sovrano, creazione di un esercito statale,
+il potere viene esericitato su un territorio ben preciso
+Il regno diventa un patrimonio, diventa una proprietà del sovrano (eredità al legittimo successore)
+
+Il potere concide con la corte del Re, dimora del sovrano
+
+# Guerra dei 100 anni
+
+1337 cominicia la guerra.
+Alla fine XII secolo il suolo fr era occupato da feudi inglesi
+Filippo VI di Valois si appropria dei feudi inglesi, ma Edoardo III rivendica la corona francese,
+La prima parte della guerra è tutta inglese.
+1420 trattato di Troyes (si dichiara la vincita inglese)
+
+I due sovrani non sono soddisfatti dalla situazione, Carlo VII viene consacrato Re grazie a Giovanna d'Arco,
+Organizza la riscossa contro gli inglesi, il duca di borgogna cambia schieramento, gli inglesi vennero sconfitti a Castillon nel 1453.
+
+Tattica medievale in evoluzione durante la guerra.
+
+**prima**
+
+- solo cavalieri
+- armature pesanti
+- armi corpo a corpo
+- solo i nobili potevano combattere
+- mura alte e strette
+
+**dopo**
+
+- altri ruoli (fanteria, balestrieri)
+- armature più leggere e meno costose
+- armi per il combattimento dalla distanza: archi, cannoni, picche
+- tutti potevano far parte dell'Esercito
+- mura basse e larghe
+
+**L'Inghilterra ha perso la guerra**, due anni dopo sorge un conflitto interno fra due famiglie, una guerra civile, **\*Guerre delle due Rose** (dai lori stemmi)
+Alla fine del 1400 viene incoronato Enerico VII Tudor (imparentato con entrambe le famiglie)
+Costruisce e fortifica bene il potere:
+
+- indebolisce il potere aristocratco
+- istituisce il **consiglio della corona**, (aristocratici e giuristi nominati da lui)
+- controllo della chiesa e tasse al clero

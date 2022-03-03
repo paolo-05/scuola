@@ -89,6 +89,8 @@ Aumento dei poveri soprattutto nelle città
 3. Inghilterra, contadini e salariati si abbracciarono a un movimento eretico
 4. Firenze, capitale dell'artigianato in Italia, 1378 rivolta dei Ciompi, pettinavano la lana, soffocata nel sangue
 
+# Accentramento dei poteri
+
 Dal 1300 in poi la funzione del sovrano cresce e punta a un potere assolouto, _absolutus = libero, sciolto_, comincia un lotta fra i privilegi dei nobili e la ricerca del potere assoluto.
 
 Il sovrano cerca di controllare più realtà possibili, controllano anche la chiesa "nazionale" (che vivono sul loro territorio),
@@ -135,3 +137,5 @@ Costruisce e fortifica bene il potere:
 - indebolisce il potere aristocratco
 - istituisce il **consiglio della corona**, (aristocratici e giuristi nominati da lui)
 - controllo della chiesa e tasse al clero
+
+# La monarchia Spagnola nel 1400

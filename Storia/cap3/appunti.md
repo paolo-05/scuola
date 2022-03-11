@@ -138,4 +138,3 @@ Costruisce e fortifica bene il potere:
 - istituisce il **consiglio della corona**, (aristocratici e giuristi nominati da lui)
 - controllo della chiesa e tasse al clero
 
-# La monarchia Spagnola nel 1400

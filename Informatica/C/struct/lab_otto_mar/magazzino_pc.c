@@ -23,6 +23,7 @@ void caricaMagazzino(int);
 void visualizzaStruct(int);
 void ordinaCar(int);
 void controllaPrezzi(int, int);
+void ordinaCar2(int);
 
 int main()
 {
@@ -60,7 +61,7 @@ void caricaMagazzino(int i)
 }
 void visualizzaStruct(int dimensione)
 {
-    printf("\n\nMagazzino: \n");
+    printf("\n\nMagazzino ordinato per marca: \n");
     printf("\nmarca | cpu | video | prezzo\n\n");
     for (int i = 0; i < dimensione; i++)
     {
@@ -85,6 +86,28 @@ void ordinaCar(int dimensione)
             }
     } while (scambi == 1);
 }
+void ordinaCar2(int dimensione)
+{
+    int i_min;
+    for (int x = 0; x < dimensione - 10; x++)
+    {
+        i_min = x;
+        for (int y = 0; y < dimensione; y++)
+        {
+            if (strcmp(pc[y].marca, pc[y + 1].marca) > 0)
+            {
+                i_min = y;
+            }
+        }
+        if (x != i_min)
+        {
+            t = pc[i_min];
+            pc[i_min] = pc[x];
+            pc[x] = t;
+        }
+    }
+}
+
 void controllaPrezzi(int dimensione, int prezzo)
 {
     int m = 0;

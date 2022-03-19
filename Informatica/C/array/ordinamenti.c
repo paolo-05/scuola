@@ -16,30 +16,57 @@ void bubbleSort(int *, int);
 void selectionSort(int *, int);
 void insertionSort(int *, int);
 
+// quickSort:
+void scambia(int vet[], long x, long y);
+int partiziona(int vet[], int sx, int dx);
+void quickSort(int vett[], int e_sx, int e_dx);
+
+int binarySearch(int *, int, int, int);
+
 int main()
 {
-    int vettore[DIM], max = 100, s;
+    int vettore[DIM], max = 100, s, n, trovato;
     riempi(vettore, DIM, max);
     visualizza(vettore, DIM);
-    printf("\n1 - bubbleSort\n2 - selectionSort\n3 - insertionSort");
-    printf("\nalgoritmo: ");
-    scanf("%d", &s);
-    switch (s)
+    do
     {
-    case 1:
-        bubbleSort(vettore, DIM);
-        break;
-    case 2:
-        selectionSort(vettore, DIM);
-        break;
-    case 3:
-        insertionSort(vettore, DIM);
-        break;
-    default:
-        printf("Numero non corretto");
-        break;
-    }
-    visualizza(vettore, DIM);
+        printf("\n1 - bubbleSort\n2 - selectionSort\n3 - insertionSort\n4 - quickSort\n5 - binarySearch");
+        printf("\nalgoritmo: ");
+        scanf("%d", &s);
+        switch (s)
+        {
+        case 1:
+            bubbleSort(vettore, DIM);
+            visualizza(vettore, DIM);
+            break;
+        case 2:
+            selectionSort(vettore, DIM);
+            visualizza(vettore, DIM);
+            break;
+        case 3:
+            insertionSort(vettore, DIM);
+            visualizza(vettore, DIM);
+            break;
+        case 4:
+            quickSort(vettore, 0, DIM - 1);
+        case 5:
+            bubbleSort(vettore, DIM);
+            visualizza(vettore, DIM);
+            printf("\nNumero da cercare: ");
+            scanf("%d", &n);
+            trovato = binarySearch(vettore, 0, DIM, n);
+            if (trovato == -1)
+                printf("\nIl numero %d non è presente.\n", n);
+            else
+                printf("\nIl numero e' in posizione %d\n", trovato);
+
+            break;
+        default:
+            printf("Numero non corretto");
+            break;
+        }
+    } while (s > 0);
+
     return 0;
 }
 void riempi(int vet[], int num, int max)
@@ -105,5 +132,70 @@ void selectionSort(int vet[], int tanti)
             vet[x] = temp;
         }
         visualizza(vet, tanti); // visualizza un passo di ordinamento
+    }
+}
+
+int binarySearch(int v[], int inizio, int fine, int numero)
+{
+    int estrInf = inizio;   // estremo inferiore
+    int estrSup = fine - 1; // estremo superiore
+    int medio;
+    while (estrInf <= estrSup) // il vettore non è finito
+    {
+        medio = (estrInf + estrSup) / 2; // nuovo valore iniziale
+        if (numero > v[medio])           // se il numero è maggiore
+        {
+            estrInf = medio + 1; // è nella parte destra
+        }
+        else
+        {
+            if (numero < v[medio])   // se il numero è minore
+                estrSup = medio - 1; // è nella parte sinistra
+            else
+                return medio; // altrimenti l'ho trovato
+        }
+    }
+    return -1; // il numero non è presente
+}
+
+void scambia(int vet[], long x, long y)
+{
+    int tmp = vet[x];
+    vet[x] = vet[y];
+    vet[y] = tmp;
+}
+
+int partiziona(int vett[], int sx, int dx)
+{
+    int pivot, ipivot;    // valore di pivot, indice posizione pivot
+    ipivot = sx;          // scegli indice per il pivot: Hoare usa il primo
+    pivot = vett[ipivot]; // valore_pivot <- [posizione_iniziale_pivot]
+    // effettua il partizionamento in due sotto vettori individuando q (posizione_effettiva_pivot)
+    while (sx < dx)
+    {
+        while ((vett[sx] <= pivot) && (sx < dx)) // cerco elemento di sinistra > pivot
+            sx++;
+        while (vett[dx] > pivot) // cerco elemento di destra < pivot
+            dx--;
+        if (sx < dx)
+        {                          // se non ho finito di ordinare
+            scambia(vett, sx, dx); // scambio i due elementi
+        }
+    }
+    scambia(vett, ipivot, dx); // posiziona il pivot nella sua cella q
+    // mostraVettore();                           // visualizza un passo
+    printf("*");
+    return dx;
+}
+
+void quickSort(int vett[], int e_sx, int e_dx)
+{
+    int q; // nuovo indice  pivot
+    if (e_sx < e_dx)
+    { // ctr termine vettore
+        q = partiziona(vett, e_sx, e_dx);
+        // -- chiamata sui sotto vettori sinistro e destro
+        quickSort(vett, e_sx, q - 1); // vet di sinistra
+        quickSort(vett, q + 1, e_dx); // vet di destra
     }
 }

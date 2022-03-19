@@ -18,7 +18,7 @@ int main()
     char lib[ALF] = "zyxwvutsrqponmlkjihgfedcba";
     char in[100], messCod[100], messDecod[100];
     input(in);
-    codifica(in, strlen(in) + 1, lib, messCod);
+    codifica(in, strlen(in), lib, messCod);
     decodifica(in, strlen(in), lib, messDecod);
     return 0;
 }
@@ -29,18 +29,21 @@ void input(char str[])
 }
 void codifica(char str[], int dim, char lib[], char strCod[])
 {
-    for (int i = 0; i < dim; i++)
+    int i;
+    for (i = 0; i < dim; i++)
     {
         strCod[i] = lib[str[i] - 97];
     }
+    strCod[i] = '\0';
     printf("\nMessaggio codificato: %s \n", strCod);
 }
 void decodifica(char lib[], int dim, char strCod[], char strDecod[])
 {
-    for (int i = 0; i < dim; i++)
+    int i;
+    for (i = 0; i < dim; i++)
     {
         strDecod[i] = lib[122 - strCod[i]];
-        printf("%c ", strDecod[i]);
     }
+    strDecod[i] = '\0';
     printf("\nMessagio decodificato: %s\n", strDecod);
 }

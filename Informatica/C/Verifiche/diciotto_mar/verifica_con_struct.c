@@ -1,5 +1,5 @@
 /*
-	Paolo Bianchessi 18.03.21
+	Paolo Bianchessi 29.03.21
 */
 #include <stdio.h>
 #include <string.h>
@@ -100,45 +100,45 @@ double vendTot(venditore venditori[])
 	double acc = 0;
 	for (i = 0; i < VEN; i++)
 		acc += venditori[i].importo;
-	return acc; // ritorno la somma delle vendite
+	return acc;
 }
 
 int cercaVen(venditore venditori[], char s[])
 {
-	int estrInf = 0;	   // estremo inferiore
-	int estrSup = VEN - 1; // estremo superiore
+	int estrInf = 0;
+	int estrSup = VEN - 1;
 	int medio;
-	while (estrInf <= estrSup) // il vettore non è finito
+	while (estrInf <= estrSup)
 	{
-		medio = (estrInf + estrSup) / 2;		  // nuovo valore iniziale
-		if (strcmp(s, venditori[medio].nome) > 0) // se il numero è maggiore
+		medio = (estrInf + estrSup) / 2;
+		if (strcmp(s, venditori[medio].nome) > 0)
 		{
-			estrInf = medio + 1; // è nella parte destra
+			estrInf = medio + 1;
 		}
 		else
 		{
-			if (strcmp(s, venditori[medio].nome) < 0) // se il numero è minore
-				estrSup = medio - 1;				  // è nella parte sinistra
+			if (strcmp(s, venditori[medio].nome) < 0)
+				estrSup = medio - 1;
 			else
-				return medio; // altrimenti l'ho trovato
+				return medio;
 		}
 	}
-	return -1; // il numero non è presente
+	return -1;
 }
 
 void stampaSt(venditore venditori[])
 {
 	int i;
-	printf("\nVenditore | Vendite | Indice Array\n");
+	printf("\nVenditore	Vendite		Indice Array\n");
 	for (i = 0; i < VEN; i++)
-		printf("%s | %2.lf | %d\n", venditori[i].nome, venditori[i].importo, i);
+		printf("%s		%2.lf		%d\n", venditori[i].nome, venditori[i].importo, i);
 }
 
 int cercaMax(venditore venditori[])
 {
-	int max = 0, i; // inizializzo il massimo valore a indice 0
+	int max = 0, i;
 	for (i = 0; i < VEN; i++)
-		if (venditori[i].importo > venditori[max].importo) // se il numero � maggiore di max, max � il nuovo maggiore
+		if (venditori[i].importo > venditori[max].importo)
 			max = i;
 	return max;
 }
@@ -152,35 +152,31 @@ void scambia(venditore vet[], long x, long y)
 
 int partiziona(venditore venditori[], int sx, int dx)
 {
-	int pivot, ipivot;				   // valore di pivot, indice posizione pivot
-	ipivot = sx;					   // scegli indice per il pivot: Hoare usa il primo
-	pivot = venditori[ipivot].importo; // valore_pivot <- [posizione_iniziale_pivot]
-	// effettua il partizionamento in due sotto vettori individuando q (posizione_effettiva_pivot)
+	int pivot, ipivot;
+	ipivot = sx;
+	pivot = venditori[ipivot].importo;
 	while (sx < dx)
 	{
-		while ((venditori[sx].importo <= pivot) && (sx < dx)) // cerco elemento di sinistra > pivot
+		while ((venditori[sx].importo <= pivot) && (sx < dx))
 			sx++;
-		while (venditori[dx].importo > pivot) // cerco elemento di destra < pivot
+		while (venditori[dx].importo > pivot)
 			dx--;
 		if (sx < dx)
-		{								// se non ho finito di ordinare
-			scambia(venditori, sx, dx); // scambio i due elementi
+		{
+			scambia(venditori, sx, dx);
 		}
 	}
-	scambia(venditori, ipivot, dx); // posiziona il pivot nella sua cella q
-	// mostraVettore();                           // visualizza un passo
-	// printf("*");
+	scambia(venditori, ipivot, dx);
 	return dx;
 }
 
 void ordinaCrescente(venditore venditori[], int e_sx, int e_dx)
 {
-	int q; // nuovo indice  pivot
+	int q;
 	if (e_sx < e_dx)
-	{ // ctr termine vettore
+	{
 		q = partiziona(venditori, e_sx, e_dx);
-		// -- chiamata sui sotto vettori sinistro e destro
-		ordinaCrescente(venditori, e_sx, q - 1); // vet di sinistra
-		ordinaCrescente(venditori, q + 1, e_dx); // vet di destra
+		ordinaCrescente(venditori, e_sx, q - 1);
+		ordinaCrescente(venditori, q + 1, e_dx);
 	}
 }

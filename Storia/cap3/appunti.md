@@ -130,11 +130,10 @@ Tattica medievale in evoluzione durante la guerra.
 - tutti potevano far parte dell'Esercito
 - mura basse e larghe
 
-**L'Inghilterra ha perso la guerra**, due anni dopo sorge un conflitto interno fra due famiglie, una guerra civile, **\*Guerre delle due Rose** (dai lori stemmi)
+**L'Inghilterra ha perso la guerra**, due anni dopo sorge un conflitto interno fra due famiglie, una guerra civile, **Guerre delle due Rose** (dai lori stemmi)
 Alla fine del 1400 viene incoronato Enerico VII Tudor (imparentato con entrambe le famiglie)
 Costruisce e fortifica bene il potere:
 
 - indebolisce il potere aristocratco
 - istituisce il **consiglio della corona**, (aristocratici e giuristi nominati da lui)
 - controllo della chiesa e tasse al clero
-

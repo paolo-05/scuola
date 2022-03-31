@@ -35,3 +35,12 @@ come si giustifica lo sfruttamento?
 
 alcuni dei conquistatori all'incontro con gli indios, li definivano non - umani quindi erano delle bestie
 pag 338
+
+# Atlantizzazione [p. 328]
+
+porto di Anversa, nodo principale degli scambi Europei - Americani, **Atlantizzazione**
+
+# Rivuluzione dei prezzi nel 1500
+
+aumento ovunque del prezzo del cereale - salari crescono ma non a pari
+La popolazione è tornata al livello che c'era prima della Peste.(80 mln)

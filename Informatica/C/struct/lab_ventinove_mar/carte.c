@@ -25,10 +25,11 @@ void inizializzamazzo(Mazzo M);
 void stampamazzo(Mazzo M);
 void scambiacarte(Carta *c1, Carta *c2);
 void mescolamazzo(Mazzo M);
+void elimina(Mazzo M, int n);
 
-void estraiCarte(Mazzo M, Estratte E);
+void estraiCarte(Mazzo M, Estratte E, int m);
 void mostraEstratte(Estratte E);
-void cambiaCarta(Estratte E, Mazzo M);
+void cambiaCarta(Estratte E, Mazzo M, int m);
 int calcolaPunti(Estratte E);
 
 // programma del gioco
@@ -46,12 +47,12 @@ int main()
     stampamazzo(M);*/
 
     // inizio gioco
-    for (int i = 0; i < NUMCARTE; i++)
+    for (int i = NUMCARTE; i > EST; i--)
     {
         printf("\n\n\nCarte estratte: ");
-        estraiCarte(M, E);
+        estraiCarte(M, E, i);
         mostraEstratte(E);
-        cambiaCarta(E, M);
+        cambiaCarta(E, M, i);
         printf("\nCalcolo del punteggio in corso...\n");
         punti = calcolaPunti(E);
         printf("Punti: %2d", punti);
@@ -70,11 +71,6 @@ void inizializzamazzo(Mazzo M)
             M[s * 13 + i - 1].seme = semi[s];
         }
     }
-    // alternativa
-    // for(i=0; i<NUMCARTE; i++){
-    //	M[i].seme = semi[i%4];
-    //	M[i].valore = 1+(i%13);
-    //}
 }
 
 // stampa mazzo "fridendly"
@@ -128,14 +124,23 @@ void mescolamazzo(Mazzo M)
         scambiacarte(&M[i], &M[j]);
     }
 }
+void elimina(Mazzo M, int n)
+{
+    for (int i = 0; i < NUMCARTE; i++)
+    {
+        M[i - 1] = M[i];
+    }
+}
+
 // estrazione casuale di carte dal mazzo
-void estraiCarte(Mazzo M, Estratte E)
+void estraiCarte(Mazzo M, Estratte E, int m)
 {
     int i, k;
     for (k = 0; k < EST; k++)
     {
-        i = rand() % NUMCARTE;
+        i = rand() % m;
         E[k] = M[i];
+        elimina(M, i);
     }
 }
 //
@@ -169,9 +174,9 @@ void mostraEstratte(Estratte E)
     }
 }
 // chiede se si vuole cambiare e si prende casualmente dal mazzo una carta
-void cambiaCarta(Estratte E, Mazzo M)
+void cambiaCarta(Estratte E, Mazzo M, int m)
 {
-    int p = 0, s = rand() % NUMCARTE;
+    int p = 0, s = rand() % m;
     char c = 'n';
     printf("\nHai visto il mazzo, vuoi cambiare una di queste carte? (s/n) ");
     scanf(" %c", &c);
@@ -206,9 +211,13 @@ int calcolaPunti(Estratte E)
     int punti = 0;
     for (int i = 0; i < EST - 1; i++)
     {
-        if (E[i].valore == E[1].valore || E[i].valore == E[2].valore || E[i].valore == E[3].valore || E[i].valore == E[4].valore)
+        for (int j = 0; j < EST; j++)
         {
-            punti++;
+            if ((E[i].seme == E[j].seme || E[i].valore == E[j].valore) && i != j)
+            {
+                punti++;
+            }
         }
     }
+    return punti;
 }

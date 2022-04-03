@@ -40,30 +40,25 @@ int ggTra(Data d1, Data d2)
     g1 = d1.anno * 365 + d1.giorno + numGG[d1.mese - 1];
     g2 = d2.anno * 365 + d2.giorno + numGG[d2.mese - 1];
 
-    return g1 - g2;
+    return abs(g1 - g2);
 }
-Data aggiungiGiorni(Data d, int gg)
+int aggiungiGiorni(Data d, int gg)
 {
     Data nd;
-    int gg, mm, aa;
+    int ggTot, mm, aa;
     int numGG[12] = {0, 31, 59, 90, 120, 151, 181, 212, 243, 273, 304, 334};
-    gg = d.anno * 365 + d.giorno + numGG[d.mese - 1] + gg;
-
-    return nd;
+    ggTot = d.anno * 365 + d.giorno + numGG[d.mese - 1] + gg;
+    nd.anno = ggTot / 365;
+    ggTot = numGG[((ggTot - nd.anno * 365) % 12) - 1];
+    return ggTot;
 }
 int main()
 {
     Data d1, d2;
-    char s[10];
-    int n;
-    printf("Inserisci una data: ");
-    scanf("%s", s);
+    int ggTot;
+    char s[10] = "10/02/2022";
     d1 = nuovaData(s);
-    strcpy(s, "");
-    printf("\nInserisci una data: ");
-    scanf("%s", s);
-    d2 = nuovaData(s);
-    n = ggTra(d1, d2);
-    printf("\nI giorni tra le due date sono %d\n", n);
+    ggTot = aggiungiGiorni(d1, 10);
+    printf("\n%d\n", ggTot);
     return 0;
 }

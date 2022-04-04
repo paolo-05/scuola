@@ -23,7 +23,7 @@ void stampaDataF(Data d)
                          "luglio", "agosto",
                          "settembre", "ottobre",
                          "novembre", "dicembre"};
-    printf("%d %s %d", d.giorno, mesi[d.mese - 1], d.anno);
+    printf("%d %s %d\n", d.giorno, mesi[d.mese - 1], d.anno);
 }
 
 Data nuovaData(char s[])
@@ -42,23 +42,32 @@ int ggTra(Data d1, Data d2)
 
     return abs(g1 - g2);
 }
-int aggiungiGiorni(Data d, int gg)
+Data aggiungiGiorni(Data d, int gg)
 {
     Data nd;
-    int ggTot, mm, aa;
+    int ggTot, mm;
     int numGG[12] = {0, 31, 59, 90, 120, 151, 181, 212, 243, 273, 304, 334};
     ggTot = d.anno * 365 + d.giorno + numGG[d.mese - 1] + gg;
     nd.anno = ggTot / 365;
-    ggTot = numGG[((ggTot - nd.anno * 365) % 12) - 1];
-    return ggTot;
+    mm = ggTot - (nd.anno * 365) - d.giorno - gg;
+    for (int i = 0; i < 12; i++)
+        if (numGG[i] == mm)
+            nd.mese = i + 1;
+    nd.giorno = ggTot - mm - (nd.anno * 365);
+    return nd;
 }
 int main()
 {
     Data d1, d2;
-    int ggTot;
-    char s[10] = "10/02/2022";
+    int offset;
+    char s[10];
+    printf("Inserisci una data: ");
+    scanf("%s", s);
     d1 = nuovaData(s);
-    ggTot = aggiungiGiorni(d1, 10);
-    printf("\n%d\n", ggTot);
+    stampaDataF(d1);
+    printf("\ninserisci un numero di giorni (negativo o positivo): ");
+    scanf("%d", &offset);
+    d2 = aggiungiGiorni(d1, offset);
+    stampaDataF(d2);
     return 0;
 }

@@ -39,14 +39,17 @@ void cancella(Dato v[], int d, int p)
 int main()
 {
     int dim = 9;
-    Dato a[9] = {{1, 1}, {2, 1}, {3, 1}, {4, 1}, {5, 1}, {6, 1}, {7, 1}, {8, 1}, {9, 1}};
-    stampa(a, dim);
-    // elimina(a, dim, 3);
+    Dato a[9] = {{1, 1}, {2, 1}, {3, 1}, {4, 1}, {5, 1}, {6, 1}, {7, 1}, {8, 1}, {9, 1}}; // elimazione logica
+    // int v[9] = {1, 2, 3, 4, 5, 6, 7, 8, 9};                                               // elimazione fisica
+    // stampa(v, dim);
+    // elimina(v, dim, 3);
     // dim--;
+    // stampa(a, dim);
+    stampaP(a, dim);
     cancella(a, dim, 3);
 
     printf("\n");
-    // stampa(a, dim);
+
     stampaP(a, dim);
     return 0;
 }

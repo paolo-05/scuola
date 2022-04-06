@@ -28,9 +28,9 @@ void loop() {
     for (int x = -3; x < 3; x++)
       if (xLed[i].posLog == xVal)
         digitalWrite(xLed[i].pin, HIGH);
-    
+
     for (int y = -3; y < 3; y++)
-      if(yLed[i].posLog == yVal)
+      if (yLed[i].posLog == yVal)
         digitalWrite(yLed[i].pin, HIGH);
   }
 

@@ -1,43 +1,49 @@
 #define LDS 6
 int xPin = 0;
 int yPin = 1;
-int zPin  = 1;
+int zPin = 1;
 int xVal = 0, yVal = 0, zVal = 1;
 
-int xLed[LDS] = {2, 3, 4, 5, 6, 7}; // verde - rosso
-int yLed[LDS] = {8, 9, 10, 11, 12, 13}; // iallo - blu
+typedef struct bar {
+  int pin;
+  int posLog;
+} Bar;
 
-void setup(){
+Bar xLed[LDS] = { { 2, -3 }, { 3, -2 }, { 4, 1 }, { 5, 1 }, { 6, 2 }, { 7, 3 } };       // verde - rosso
+Bar yLed[LDS] = { { 8, -3 }, { 9, -2 }, { 10, -1 }, { 11, 1 }, { 12, 2 }, { 13, 3 } };  // giallo - blu
+
+void setup() {
   pinMode(zPin, INPUT);
-  for(int i = 0; i < LDS; i++){
-    pinMode(xLed[i], OUTPUT);
-    pinMode(yLed[i], OUTPUT);
+  for (int i = 0; i < LDS; i++) {
+    pinMode(xLed[i].pin, OUTPUT);
+    pinMode(yLed[i].pin, OUTPUT);
   }
-  Serial.begin(9600);
 }
 
-void loop(){
-  xVal = map(analogRead(xPin), 0, 1023, 0, 6);
-  yVal = map(analogRead(yPin), 0, 1023, 0, 6);
+void loop() {
+  xVal = map(analogRead(xPin), 0, 1023, -3, 3);
+  yVal = map(analogRead(yPin), 0, 1023, -3, 3);
   zPin = digitalRead(zPin);
+  for (int i = 0; i < LDS; i++) {
+    for (int x = -3; x < 3; x++)
+      if (xLed[i].posLog == xVal)
+        digitalWrite(xLed[i].pin, HIGH);
+    
+    for (int y = -3; y < 3; y++)
+      if(yLed[i].posLog == yVal)
+        digitalWrite(yLed[i].pin, HIGH);
+  }
 
-  for(int i = 0; i < xVal; i++)
-    digitalWrite(xLed[i], HIGH);
-
-  for(int i = 0; i < yVal; i++)
-    digitalWrite(yLed[i], HIGH);
-
-
-  if (zPin != HIGH){
+  if (zPin != HIGH) {
     accendiLed(HIGH);
     delay(1000);
   }
   accendiLed(LOW);
 }
 
-void accendiLed(int val){
-  for(int i = 0; i < LDS; i++){
-    digitalWrite(xLed[i], val);
-    digitalWrite(yLed[i], val);
+void accendiLed(int val) {
+  for (int i = 0; i < LDS; i++) {
+    digitalWrite(xLed[i].pin, val);
+    digitalWrite(yLed[i].pin, val);
   }
 }

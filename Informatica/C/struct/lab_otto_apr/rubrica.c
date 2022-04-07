@@ -7,6 +7,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#define MAX_EL 100
 
 typedef struct r
 {
@@ -14,7 +15,7 @@ typedef struct r
     char cognome[20];
     char numero[20];
 } Record;
-typedef Record Rubrica[100];
+typedef Record Rubrica[MAX_EL];
 
 void init(Rubrica r, int *elementi);
 void menu(Rubrica r, int *elementi);
@@ -30,7 +31,7 @@ int main()
     int elementi = 0;
     char s = 's';
     Rubrica r;
-    while (s == 's')
+    while (s == 's' && elementi < MAX_EL)
     {
         init(r, &elementi);
         printf("Continuare (s/n): ");
@@ -70,10 +71,8 @@ void menu(Rubrica r, int *elementi)
         case 2:
             // ricerca
             presente = ricerca(r, *elementi);
-            if (presente == -1)
-                printf("\nNell'archivio non è stata trovata nessuna corrispondenza\n");
-            else
-                printf("\nIl numero di telefono di %s %s e' %s", r[presente].nome, r[presente].cognome, r[presente].numero);
+            (presente == -1) ? printf("\nNell'archivio non è stata trovata nessuna corrispondenza\n")
+                             : printf("\nIl numero di telefono di %s %s e' %s", r[presente].nome, r[presente].cognome, r[presente].numero);
             break;
         case 3:
             // aggiornamento di un numero telefonico
@@ -82,7 +81,7 @@ void menu(Rubrica r, int *elementi)
             break;
         case 4:
             // insrimento di un altro record
-            init(r, elementi);
+            ((*elementi) < 100) ? init(r, elementi) : printf("\nImpossibile aggiungere altri record: Rubrica piena.\n");
             break;
         case 5:
             // cancella
@@ -116,9 +115,7 @@ void stampa(Rubrica r, int elementi)
 {
     printf("\nNome\t\tCognome\t\tNumero di telefono\n");
     for (int i = 0; i < elementi; i++)
-    {
         printf("%s\t\t%s\t\t%s\n", r[i].nome, r[i].cognome, r[i].numero);
-    }
 }
 
 // ricerca di un numero tramite nome - cognome

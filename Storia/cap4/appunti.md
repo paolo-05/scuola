@@ -44,3 +44,15 @@ porto di Anversa, nodo principale degli scambi Europei - Americani, **Atlantizza
 
 aumento ovunque del prezzo del cereale - salari crescono ma non a pari
 La popolazione è tornata al livello che c'era prima della Peste.(80 mln)
+
+# Cultura del Rinascimento
+
+Fine del 1400, carta fatta da un Tedesco Henircus Martellus, a Firenze, il mondo si era allargato, si conosceva la rotta atlantica e tutta l'Africa
+
+Queste scoperta aprirono la mente alle persone, che avevano uno spirito di curiosità e avventura.
+
+Fiducia nelle capacità dell'uomo, le scoperte fanno risaltare la superiorità dell'essere umano.
+
+Allargare orizzonti = nuovi dubbi.
+
+**Antroprocentrismo** = uomo messo al centro

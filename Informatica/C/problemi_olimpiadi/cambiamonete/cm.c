@@ -12,7 +12,6 @@
 // 1     2     5     10     20     50     100   200   500   1000   2000   5000  10000   20000   50000 centesimi
 
 int valorePezzo[PEZZI_MONETE] = {1, 2, 5, 10, 20, 50, 100, 200, 500, 1000, 2000, 5000, 10000, 20000, 50000};
-
 int main()
 {
     int moneteInserite[PEZZI_MONETE], moneteDaDare[PEZZI_MONETE], centesimiTot = 0;
@@ -20,16 +19,12 @@ int main()
         scanf("%d", &moneteInserite[i]);
     for (int j = 0; j < PEZZI_MONETE; j++)
         centesimiTot += moneteInserite[j] * valorePezzo[j];
-
     for (int k = PEZZI_MONETE - 1; k >= 0; k--)
     {
         moneteDaDare[k] = centesimiTot / valorePezzo[k];
         centesimiTot %= valorePezzo[k];
     }
     for (int i = 0; i < PEZZI_MONETE; i++)
-    {
         printf("%d ", moneteDaDare[i]);
-    }
-
     return 0;
 }

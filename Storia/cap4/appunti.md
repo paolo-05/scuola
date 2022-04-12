@@ -56,3 +56,11 @@ Fiducia nelle capacità dell'uomo, le scoperte fanno risaltare la superiorità d
 Allargare orizzonti = nuovi dubbi.
 
 **Antroprocentrismo** = uomo messo al centro
+
+**Umanesimo** = Humanae litterae, tutto ciò che arriva dal classico, patrimonio culturale, riscoperta del classicismo, nel 1400 - 1500
+pag 292
+
+Nicolò Pusano e Marsilio Ficino, Neoplatonesimo.
+
+5 gradini, pura materia -> puro spirito
+uomo in mezzo

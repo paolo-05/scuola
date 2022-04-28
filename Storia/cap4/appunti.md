@@ -64,3 +64,30 @@ Nicolò Pusano e Marsilio Ficino, Neoplatonesimo.
 
 5 gradini, pura materia -> puro spirito
 uomo in mezzo
+
+# Riforma protestante
+
+Nel 1517
+95 tesi appese sulla chiesa di Littemberg, da Martin Lutero, monaco agostiniano, tesi che vanno contro la Chiesa cattolica.
+
+# Forme arte Rinascimento
+
+Stile classico ma integrate con protaginisti della liturgia Cristiana
+la parola rinascimento nasce nel 1800 quando gli artisti osservavano l'arte del 1500, si accorgono che rinasce
+
+# Sentimento di avversione nella Germania del 1500
+
+desiderio di sganciarsi dall'Impero e poi dalla chiesa, scollarsi dal potere universale.
+
+indulgenza, perdono speciale, avviene tramite il pentimento, in particolari momenti si può scontare la pena
+
+scandalo di Alberto di Brandeburgo
+
+Martin Lutero confessa molta genta e sente che gente ottenie indulgenza dopo aver pagato dei soldi, egli scrive ad A. di Brandeburgo, esponendo 95 tesi, ribadendo sulla legittimità delle indulgenze nei modi, il vescovo non rispose mai, ma le idee si diffusero grazie alla stampa.
+
+Nel 1521 Lutero, dopo che le sue idee si diffusero, il Papa lo avvisa, ma non molla, così viene scomunicato tramite bolla papale. Nel frattempo il focus di Lutero si spostò.
+[p 350], bilancia con la Bibbia da un parte, dall'altra il Papa assieme alle Chiavi, la bilancia pende verso la bibbia, se uno si dichiara cristiano basta che sappia la Bibbia, per l'epoca era una rivoluzione, si pensava che le scritture erano solo per gli Oratores, ma crea uno schema chiamata del Libero Esamo, ogni cristiano ha il diritto/dovere di leggere le scritture, da solo senza il sacerdote, facendo così decadere l'utilità dei preti, gli unici sacramenti riconosciuti da Lutero erano solo il Battesimo e la Comunione, Sacerdozio Universale, tutti gli uomini possono praticare il sacerdozio, vengono scelti dei pastori della comunità.
+
+# [p. 481], il dramma privato di Lutero
+
+Egli si sentiva un grandissimo peccatore.

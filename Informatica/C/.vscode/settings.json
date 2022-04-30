@@ -9,6 +9,7 @@
         "type_traits": "c",
         "utility": "c",
         "stdlib.h": "c",
-        "algorithm": "c"
+        "algorithm": "c",
+        "stdio.h": "c"
     }
 }

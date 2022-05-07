@@ -10,6 +10,7 @@
         "utility": "c",
         "stdlib.h": "c",
         "algorithm": "c",
-        "stdio.h": "c"
+        "stdio.h": "c",
+        "string.h": "c"
     }
 }

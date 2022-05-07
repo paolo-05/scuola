@@ -91,3 +91,39 @@ Nel 1521 Lutero, dopo che le sue idee si diffusero, il Papa lo avvisa, ma non mo
 # [p. 481], il dramma privato di Lutero
 
 Egli si sentiva un grandissimo peccatore.
+
+# La riforma cattolica e la controriforma
+
+il cristianesimo si deve rinnovare, ma deve fare qualcosa per combattere le altre confessioni
+Rinnovamento della chiesa cattolica nel 1500
+Rifroma fine del 1400, Controriforma: concilio di Trento
+
+La riforma partiva dai cristiani, riscoperta degli ordini religiosi, seguono una regola
+Umanesimo cristiano, Erasmo da Rotterdam
+1534
+
+Gesuiti = obbedenza al papa, lunga e solida preparazione e apostolato.
+Controriforma
+1520
+1515-1534
+1530 deita di Augusta
+1542 convocazione del Concilio di Trento
+13-12-1545 comincia il concilio di trento
+
+Conciolio esattamente a metà strada tra Roma e la Germania
+
+1545-1563
+18 anni
+3 sessioni
+4 pontefici
+nel mentre:
+inquisizione
+indice dei libri probiti
+gesuiti
+
+Il concilio si occupa della dottrina, verità della fede e della disciplina, comportamento del clero
+
+decreti dottrinali =
+sacre scritture e tradizione apostolica della Chiesa ma no al libero esame
+l'uomo ha libero arbitrio/scelta
+tutti i 7 sacramenti sono strumento di grazia

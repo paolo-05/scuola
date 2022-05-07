@@ -123,7 +123,39 @@ gesuiti
 
 Il concilio si occupa della dottrina, verità della fede e della disciplina, comportamento del clero
 
-decreti dottrinali =
-sacre scritture e tradizione apostolica della Chiesa ma no al libero esame
-l'uomo ha libero arbitrio/scelta
-tutti i 7 sacramenti sono strumento di grazia
+- decreti dottrinali:
+
+  - sacre scritture e tradizione apostolica della Chiesa ma no al libero esame
+  - l'uomo ha libero arbitrio/scelta
+  - tutti i 7 sacramenti sono strumento di grazia
+
+- decreti di disciplina:
+
+  - i vescovi e i parroci hanno obblico di residenza
+  - i vescovi devono visitare annaulmente tutti i paesi della loro diocesi
+  - seminari, percorso per scoprire la propria vocazione
+  - catechismo semplice, per i comuni fedeli, per spiegare le scritture al popolo
+  - condannate le condotte immorali, in particolari simonia e il concumbinato (convivenza)
+
+Chiesa cattolica dopo il concilio:
+
+- importanza del papa
+- arte per rappresnetare la fede cattolica
+- missioni
+- censura (Galileo)
+- austerità e lotta agli abusi (Carlo Borromeo)
+
+# Lo slancio missionario[p. 394]
+
+accurata conoscenza delle popo da evangelizare, traduzioni di preghiere e testi
+in cina i cristiani fanno una brutta fine, alcuni sopravvivono e professano in segreto, solo alla fine del 1800 riuscirono a tornare dei sacerdoti cristiani
+
+# Argomenti verifiche
+
+- esplorazioni, cause, luoghi, protagonisti
+- modi di colonizzazione
+- trattamento degli indios
+- nuove rotte, crescita dei prezzi, nuovi cibi
+- umanesimo rinascimento
+- invenzione stampa
+- riforma protestante (politica - econimica)

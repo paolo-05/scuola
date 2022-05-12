@@ -8,7 +8,7 @@ void setup(){
   pinMode(interruttoreLuceCasa, INPUT);
 }
 void loop(){
-  int attivo = 0;
+  bool attivo = false;
   int luce = analogRead(fotoR);
   if(luce < 300){
     digitalWrite(ledEsterni, HIGH);
@@ -16,12 +16,12 @@ void loop(){
     }
 
     if(digitalRead(interruttoreLuceCasa) == HIGH){
-      if(attivo == 0){
-        attivo = 1;
+      if(!attivo){
+        attivo = true;
         digitalWrite(ledCasa, HIGH);
       }
       else{
-        attivo = 0;
+        attivo = false;
         digitalWrite(ledCasa, LOW);
       }
     }

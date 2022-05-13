@@ -1,11 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 
-struct parola
-{
-	char ita[20];
-	char ing[20];
-} p[20];
+char dizionario[20] = "dizio.txt";
 
 int menu()
 {
@@ -27,7 +23,7 @@ void itaeng(char s[])
 	int trovato = 0;
 	char ita[20];
 	char eng[20];
-	f = fopen("dizio.txt", "r");
+	f = fopen(dizionario, "r");
 	if (f != NULL)
 	{
 		while (!feof(f) && !trovato)
@@ -52,7 +48,7 @@ void engita(char s[])
 	int trovato = 0;
 	char ita[20];
 	char eng[20];
-	f = fopen("dizio.txt", "r");
+	f = fopen(dizionario, "r");
 	if (f != NULL)
 	{
 		while (!feof(f) && !trovato)
@@ -74,32 +70,29 @@ void engita(char s[])
 void nuova(char ita[], char eng[])
 {
 	FILE *f;
-	f = fopen("dizio.txt", "a");
+	f = fopen(dizionario, "a");
 	if (f != NULL)
 	{
 		fprintf(f, "\n%s\t%s", ita, eng);
 		fclose(f);
 	}
 }
-
+// elimina una copoia di parole dal dizionario
 void elimina(char ita[], char eng[])
 {
-	struct parola p[20];
-	int i = 0;
-	FILE *f;
-	f = fopen("dizio.txt", "r");
-	if (f != NULL)
-	{
-		while (fscanf(f, "%s %s", p[i].ita, p[i].ing) != EOF)
-			i++;
-		for (int j = 0; j < i; j++)
-		{
-			if (strcmp())
-			{
-				/* code */
-			}
-		}
-	}
+	char itac[20], ingc[20];
+
+	FILE *vecchio, *nuovo;
+	vecchio = fopen(dizionario, "r");
+	nuovo = fopen("file.txt", "w");
+	if (vecchio != NULL && nuovo != NULL)
+		while (fscanf(vecchio, "%s %s", itac, ingc) != EOF)
+			if (strcmp(itac, ita) != 0 && strcmp(ingc, eng) != 0)
+				fprintf(nuovo, "%s\t%s\n", itac, ingc);
+	fclose(vecchio);
+	fclose(nuovo);
+	remove(dizionario);
+	rename("file.txt", dizionario);
 }
 
 int main()

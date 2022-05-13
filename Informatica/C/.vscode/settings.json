@@ -11,6 +11,7 @@
         "stdlib.h": "c",
         "algorithm": "c",
         "stdio.h": "c",
-        "string.h": "c"
+        "string.h": "c",
+        "typeinfo": "c"
     }
 }

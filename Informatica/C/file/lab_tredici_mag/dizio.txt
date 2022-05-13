@@ -1,0 +1,7 @@
+cane	dog
+gatto	cat
+casa	home
+notte	night
+ora	hour
+topo	mouse
+stanza	room

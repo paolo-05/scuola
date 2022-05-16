@@ -8,6 +8,7 @@ int main()
     FILE *o;
     char key[32]; // chiave di cifratura
     char nomefile[50];
+    char criptato[50];
     int i;
     char c;
 
@@ -33,9 +34,9 @@ int main()
         printf("File non trovato\n");
         return -1;
     }
-
+    strcpy(criptato, nomefile), strcat(criptato, ".enc");
     // scrive file criptato applicando exor ai caratteri
-    o = fopen(strcat(nomefile, ".enc"), "w");
+    o = fopen(criptato, "w");
     i = 0;
     while (!feof(f))
     {
@@ -48,4 +49,26 @@ int main()
     }
     fclose(f);
     fclose(o);
+
+    // chiede file da de-criptare
+    printf("\nFile da de-criptare: "), scanf("%s", nomefile);
+    f = fopen(nomefile, "r");
+    if (f == NULL)
+    {
+        printf("File non trovato\n");
+        return -1;
+    }
+
+    // decripta il file
+    o = fopen("decripta.txt", "w");
+    i = 0;
+    while (!feof(f))
+    {
+        if (fscanf(f, "%c", &c) > 0)
+        {
+            c = c ^ key[i % 32];
+            fprintf(o, "%c", c);
+            i++;
+        }
+    }
 }

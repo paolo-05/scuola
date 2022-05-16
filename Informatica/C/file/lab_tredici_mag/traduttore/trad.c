@@ -81,7 +81,6 @@ void nuova(char ita[], char eng[])
 void elimina(char ita[], char eng[])
 {
 	char itac[20], ingc[20];
-
 	FILE *vecchio, *nuovo;
 	vecchio = fopen(dizionario, "r");
 	nuovo = fopen("file.txt", "w");

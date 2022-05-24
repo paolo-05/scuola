@@ -83,7 +83,7 @@ void elimina(char ita[], char eng[])
 	char itac[20], ingc[20];
 	FILE *vecchio, *nuovo;
 	vecchio = fopen(dizionario, "r");
-	nuovo = fopen("file.txt", "w");
+	nuovo = fopen("[[[[dizionario.txt", "w");
 	if (vecchio != NULL && nuovo != NULL)
 		while (fscanf(vecchio, "%s %s", itac, ingc) != EOF)
 			if (strcmp(itac, ita) != 0 && strcmp(ingc, eng) != 0)
@@ -91,7 +91,7 @@ void elimina(char ita[], char eng[])
 	fclose(vecchio);
 	fclose(nuovo);
 	remove(dizionario);
-	rename("file.txt", dizionario);
+	rename("[[[[dizionario.txt", dizionario);
 }
 
 int main()

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css" type="text/css">
+    <title>Generatore Password</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Generatore di Password Casuale</h1>
+        <div id="password-display"></div>
+        <label for="password-length">Lunghezza della Password: <span id="password-length-value">8</span></label>
+        <input type="range" id="password-length" class="slider" min="4" max="60" value="8">
+        <div class="checkbox-group">
+          <input type="checkbox" id="lower-case" class="checkbox" checked>
+          <label for="lower-case">Minuscole</label>
+          <input type="checkbox" id="upper-case" class="checkbox" checked>
+          <label for="upper-case">Maiuscole</label>
+          <input type="checkbox" id="numbers" class="checkbox" checked>
+          <label for="numbers">Numeri</label>
+          <input type="checkbox" id="symbols" class="checkbox" checked>
+          <label for="symbols">Simboli</label>
+        </div>
+        <button id="generate-button">Genera</button>
+      </div>
+    <script src="./script.js"></script>
+</body>
+</html>

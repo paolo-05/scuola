@@ -1,0 +1,55 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+h1 {
+    font-size: 1.5rem;
+}
+
+.slider {
+    width: 50%;
+    margin: 0.625rem auto;
+}
+
+.checkbox {
+    margin: 0 0.625rem;
+}
+
+.number-form{
+    width: 35px;
+    text-align: center;
+}
+
+#generate-button {
+    display: inline-block;
+    margin-top: 1.25rem;
+    padding: 0.625rem 1.25rem;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 0.3125rem;
+    cursor: pointer;
+}
+
+#generate-button:hover {
+    background-color: #0056b3;
+}
+
+#numbers-display {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1.25rem;
+    height: 60px;
+    text-align: center;
+    user-select: all;
+    overflow-wrap: break-word;
+}

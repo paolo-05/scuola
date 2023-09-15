@@ -27,25 +27,29 @@
                     </div>
                     <hr>
                     <p class="card-text">
-                        <div class="row">
+                        <div class="row mb-3">
                             <div class="col">
                                 Quanti numeri vuoi estrarre?
-                                <input type="text" class="number-form" id="generating-value" value="5" disabled>
-                                <input type="range" class="slider" id="generating" min="1" max="25" value="5">
+                                <br>
+                                <label for="generating"><input type="text" class="number-form" id="generating-value" value="5" disabled></label>
+                                <input type="range" class="form-slider" id="generating" min="1" max="100" value="5">
                             </div>
                             <div class="col">
-                                <input type="checkbox" id="ripetione">
-                                <label for="ripetizione">Senza ripetizione</label>
+                                <input type="checkbox" id="repetition">
+                                <label for="repetition">Senza ripetizione</label>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col">
-
+                                Intervallo da <input type="number" class="number-form" id="min-value" value="1"min="1" max="999" required> a <input type="number" class="number-form" id="max-value" min="1" max="999" value="25" required>
                             </div>
                         </div>
                     </p>
                 </div>
             </div>
+        </div>
+        <div class="button-container">
+            <button type="button" id="generate-button">Estrai</button>
         </div>
     </div>
     <script src="script.js"></script>

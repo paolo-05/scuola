@@ -12,22 +12,27 @@ h1 {
     font-size: 1.5rem;
 }
 
-.slider {
-    width: 50%;
-    margin: 0.625rem auto;
-}
-
 .checkbox {
     margin: 0 0.625rem;
 }
 
 .number-form{
+    width: auto;
+    text-align: center;
+}
+
+input[type="text"].number-form{
     width: 35px;
+}
+
+.button-container{
     text-align: center;
 }
 
 #generate-button {
+    width: 150px;
     display: inline-block;
+    margin: 0 auto;
     margin-top: 1.25rem;
     padding: 0.625rem 1.25rem;
     background-color: #007bff;
@@ -35,6 +40,7 @@ h1 {
     border: none;
     border-radius: 0.3125rem;
     cursor: pointer;
+    border-radius: 10px;
 }
 
 #generate-button:hover {
@@ -48,7 +54,6 @@ h1 {
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 1.25rem;
-    height: 60px;
     text-align: center;
     user-select: all;
     overflow-wrap: break-word;

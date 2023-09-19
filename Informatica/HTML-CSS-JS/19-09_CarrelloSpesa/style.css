@@ -23,8 +23,20 @@ button{
     color: white;
 }
 #btn-calcola{
-   background-color: green
+   background-color: #009900
+}
+#btn-calcola:hover {
+    background-color: #008800
+}
+#btn-calcola:active {
+    background-color: #007700;
 }
 #btn-azzera{
-    background-color: red;
+    background-color: #ff0000;
+}
+#btn-azzera:hover {
+    background-color: #ee0000;
+}
+#btn-azzera:active {
+    background-color: #dd0000;
 }

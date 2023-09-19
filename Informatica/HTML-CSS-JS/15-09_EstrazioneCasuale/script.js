@@ -24,8 +24,8 @@ document.addEventListener('DOMContentLoaded', function () {
 slider.addEventListener("input", function () {
     let sliderValue = slider.value;
     if(repetionCheckBox.checked){
-        if(sliderValue >= maxValue.value){
-            sliderValue = maxValue.value;
+        if(sliderValue >= maxValue.value - minValue.value + 1) {
+            sliderValue = maxValue.value - minValue.value + 1;
         }
     }
     displayValue.value = sliderValue;

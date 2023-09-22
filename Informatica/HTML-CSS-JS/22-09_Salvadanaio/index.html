@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salvadanaio</title>
+</head>
+<body>
+    <h1>Salvadanaio</h1>
+    <p>
+        Quanto vuoi mettere via?
+        <input type="number" min="1" id="store">
+        <input type="button" value="Aggiungi" id="add">
+        <input type="button" value="Svuota" id="empty">
+    </p>
+    <h2>Il salvadano contiene <span id="total"></span>€</h2>
+</body>
+<script>
+const store = document.getElementById('store');
+const btnAdd = document.getElementById('add');
+const btnEmpty = document.getElementById('empty');
+const totalDisplay = document.getElementById('total')
+
+document.addEventListener('DOMContentLoaded', () =>{
+    var total = window.localStorage.getItem('total') || 0.0;
+    totalDisplay.textContent = total.toString();
+});
+
+btnAdd.addEventListener('click', () => {
+    var total = parseFloat(window.localStorage.getItem('total')) || 0.0;
+    total += parseFloat(store.value || 0);
+    window.localStorage.setItem('total', total);
+    totalDisplay.textContent = total.toString();
+    store.value = '';
+});
+btnEmpty.addEventListener('click', () => {
+    window.localStorage.removeItem('total');
+    totalDisplay.textContent = '0.0'
+    store.value = '';
+});
+</script>
+</html>

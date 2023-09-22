@@ -5,6 +5,13 @@ const costi = [16, 25, 350, 200];
 const qts = document.querySelectorAll('input[type="number"]');
 const tots = document.querySelectorAll('input[type="text"]');
 
+document.addEventListener('DOMContentLoaded', function() {
+    const prezzi = document.querySelectorAll('span[class="costo"]');
+    for (let i = 0; i < prezzi.length; i++) {
+        prezzi[i].textContent = costi[i];
+    }
+});
+
 for (let i = 0; i < qts.length; i++) {
     qts[i].addEventListener("input", function () {
         const qt = parseInt(qts[i].value) || 0;

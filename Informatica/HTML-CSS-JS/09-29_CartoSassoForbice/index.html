@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Sasso Carta Forbice</title>
+</head>
+<body>
+    <header>
+        <h1>Sasso Carta Forbice</h1>
+    </header>
+    <div class="game-stats">
+        <p>Partire Vinte: <span id="games-won">0</span></p>
+        <p>Partire Perse: <span id="games-lost">0</span></p>
+        <p>Partite Pareggiate: <span id="games-tied">0</span></p>
+    </div>
+    <div class="container">
+        <div class="player">
+            <h2>La tua scelta</h2>
+            <div class="cards">
+                <div class="card" id="player">
+                    <img src="/img/rock.png" alt="Rock">
+                    <p>Sasso</p>
+                </div>
+                <div class="card" id="player">
+                    <img src="/img/paper.png" alt="Paper">
+                    <p>Carta</p>
+                </div>
+                <div class="card" id="player">
+                    <img src="/img/scissors.png" alt="Scissors">
+                    <p>Forbici</p>
+                </div>
+            </div>
+        </div>
+        <div class="hard-mode">
+            <label>
+                <input type="checkbox" id="hard-mode"> Modalità estrema
+            </label>
+        </div>
+        <div class="computer">
+            <h2>Scelta Computer</h2>
+            <div class="card" id="computer-choice-card">
+                <img src="" alt="" id="computer-choice">
+                <p id="computer-choice-text"></p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>© 2023 Paolo Bianchessi</p>
+    </footer>
+<script src="./script.js"></script>
+</body>
+</html>

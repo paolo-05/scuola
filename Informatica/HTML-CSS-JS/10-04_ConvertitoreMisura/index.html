@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convertitore di Lunghezza</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        input[type="number"] {
+            width: 100px;
+            padding: 5px;
+            margin: 5px;
+            text-align: center;
+        }
+        .equal-sign {
+            font-size: 20px;
+            margin: 0 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Convertitore di Lunghezza</h1>
+    <div class="container">
+        <input type="number" id="metersInput" placeholder="Metri">
+        <label for="metersInput">m</label>
+        <span class="equal-sign">=</span>
+        <input type="number" id="feetInput" placeholder="Piedi">
+        <label for="feetInput">ft</label>
+    </div>
+    <script>
+        const metersInput = document.getElementById("metersInput");
+        const feetInput = document.getElementById("feetInput");
+
+        metersInput.addEventListener("input", () => {
+            const meters = parseFloat(metersInput.value);
+            const feet = meters * 3.28084;
+            feetInput.value = isNaN(feet) ? "" : feet.toFixed(2);
+        });
+
+        feetInput.addEventListener("input", () => {
+            const feet = parseFloat(feetInput.value);
+            const meters = feet / 3.28084;
+            metersInput.value = isNaN(meters) ? "" : meters.toFixed(2);
+        });
+    </script>
+</body>
+</html>

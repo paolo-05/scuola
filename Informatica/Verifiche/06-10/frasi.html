@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Verifica Bianchessi - Frasi</title>
+</head>
+<body>
+    <header>
+        <h1>Genera Frasi</h1>
+        <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./budget.html">Budget</a></li>
+            <li><a href="./frasi.html">Frasi</a></li>
+        </ul>
+    </header>
+    <div class="container">
+        <div class="content">
+            <div class="card">
+                <label for="soggetti">Soggeti (separati da virgola):</label>
+                <input type="text" id="soggetti">
+                <br>
+                <label for="verbi">Verbi (separati da virgola):</label>
+                <input type="text" id="verbi">
+                <br>
+                <label for="oggetti">Complementi oggetto (separati da virgola):</label>
+                <input type="text" id="oggetti">
+                <br>
+                <input type="button" value="Genera" id="genera">
+                <input type="button" value="Cancella Ultima Frase" id="cancella">
+
+                <div id="list" class="description"></div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>© 2023 Paolo Bianchessi</p>
+    </footer>
+<script src="./scripts/frasi.js"></script>
+</body>
+</html>

@@ -1,6 +1,7 @@
 //
-// server TCP 1
-// riceve un numero intero e lo visualizza
+// server TCP 2
+// riceve un numero intero, lo visualizza e lo
+// restituisce al client raddoppiato
 //
 #include <sys/types.h>
 #include <sys/socket.h>
@@ -11,7 +12,7 @@
 #include <unistd.h>
 #include <ctype.h>
 #include <sys/times.h>
-#include <stdlib.h> // Added for exit()
+#include <stdlib.h>
 
 // costante contenente il numero di porta del server
 #define PORT 12345
@@ -54,6 +55,7 @@ int main()
         close(socketfd);
         exit(3);
     }
+    printf("server in ascolto.\n");
 
     /* gestione delle connessioni dei client */
     while (1)
@@ -66,7 +68,7 @@ int main()
         if (new_socket == -1)
         {
             perror("accept() failed.\n");
-            continue; // Continue the loop if accept fails
+            continue;
         }
 
         /* ----- inizio dialogo tra server e client ------ */
@@ -75,6 +77,18 @@ int main()
 
         // stampa a video del dato ricevuto
         printf("Ricevuto un dato: %d\n", dato);
+
+        // raddoppio il dato
+        dato *= 2;
+
+        printf("Dato raddoppiato: %d\n", dato);
+
+        // invio il dato raddoppiato
+        if (write(new_socket, &dato, sizeof(int)) == -1)
+        {
+            printf("errore nella write");
+            continue;
+        }
 
         /* chiusura della connessione */
         close(new_socket);

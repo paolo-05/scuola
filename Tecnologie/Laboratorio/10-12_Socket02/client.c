@@ -1,6 +1,7 @@
 //
-// client TCP 1
-// invia un numero intero al server
+// client TCP 2
+// invia un numero intero al server,
+// il server restituisce il doppio
 //
 #include <sys/types.h>
 #include <sys/socket.h>
@@ -11,7 +12,7 @@
 #include <unistd.h>
 #include <ctype.h>
 #include <sys/times.h>
-#include <stdlib.h> // Added for exit()
+#include <stdlib.h>
 
 // definizione della costante contenente il numero di porta del server
 #define PORT 12345
@@ -21,7 +22,7 @@
 
 int main()
 {
-    int socketfd, dato, ris;
+    int socketfd, dato;
     struct sockaddr_in server; //  record con gli indirizzi
 
     /* impostazione del socket */
@@ -31,7 +32,7 @@ int main()
     if (socketfd == -1)
     {
         perror("chiamata alla system call socket fallita");
-        exit(1); // Exit the program in case of an error
+        exit(1);
     }
 
     /* impostazione di indirizzo IP e porta del server a cui connettersi */
@@ -45,7 +46,7 @@ int main()
     if (connect(socketfd, (struct sockaddr *)&server, sizeof(server)) == -1)
     {
         perror("connessione al server fallita");
-        exit(2); // Exit the program in case of an error
+        exit(2);
     }
 
     /* ------ inizio dialogo tra server e client -------- */
@@ -56,8 +57,17 @@ int main()
     // invio del dato
     send(socketfd, &dato, sizeof(int), 0);
 
+    // lettura del dato inviato dal server
+    if (read(socketfd, &dato, sizeof(int)) == -1)
+    {
+        printf("read fallito");
+        exit(3);
+    }
+
+    printf("Ricevuto un dato dal server: %d\n", dato);
+
     /* chiusura della connessione */
     close(socketfd);
 
-    return 0; // Exit the program gracefully
+    return 0;
 }

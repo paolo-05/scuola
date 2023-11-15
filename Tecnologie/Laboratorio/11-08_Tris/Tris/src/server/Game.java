@@ -6,6 +6,12 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.Socket;
 
+/**
+ * The `Game` class represents a Tic Tac Toe game instance. It manages the game state and rules, including the board,
+ * player moves, and determining the game outcome.
+ *
+ * @author paolo
+ */
 public class Game {
 
     private Player[] board = {
@@ -15,6 +21,11 @@ public class Game {
 
     Player currentPlayer;
 
+    /**
+     * Checks if there is a winner in the game.
+     *
+     * @return `true` if there is a winner, `false` otherwise.
+     */
     public boolean hasWinner() {
         return
                 (board[0] != null && board[0] == board[1] && board[0] == board[2])
@@ -27,6 +38,11 @@ public class Game {
                         ||(board[2] != null && board[2] == board[4] && board[2] == board[6]);
     }
 
+    /**
+     * Checks if the game board is completely filled up.
+     *
+     * @return `true` if the board is filled up, `false` otherwise.
+     */
     public boolean boardFilledUp() {
         for (int i = 0; i < board.length; i++) {
             if (board[i] == null) {
@@ -36,6 +52,13 @@ public class Game {
         return true;
     }
 
+    /**
+     * Checks if a move is legal and updates the game board accordingly.
+     *
+     * @param location The location on the board where the player wants to make a move.
+     * @param player   The player making the move.
+     * @return `true` if the move is legal, `false` otherwise.
+     */
     public synchronized boolean legalMove(int location, Player player) {
         if (player == currentPlayer && board[location] == null) {
             board[location] = currentPlayer;
@@ -46,6 +69,9 @@ public class Game {
         return false;
     }
 
+    /**
+     * The `Player` class represents a player in the Tic Tac Toe game.
+     */
     class Player extends Thread {
         char mark;
         Player opponent;
@@ -53,6 +79,12 @@ public class Game {
         BufferedReader input;
         PrintWriter output;
 
+        /**
+         * Constructor for the `Player` class.
+         *
+         * @param socket The player's socket connection.
+         * @param mark   The player's mark (either 'X' or 'O').
+         */
         public Player(Socket socket, char mark) {
             this.socket = socket;
             this.mark = mark;
@@ -67,16 +99,29 @@ public class Game {
             }
         }
 
+        /**
+         * Sets the opponent for this player.
+         *
+         * @param opponent The opponent player.
+         */
         public void setOpponent(Player opponent) {
             this.opponent = opponent;
         }
 
+        /**
+         * Informs the player about the opponent's move.
+         *
+         * @param location The location where the opponent made a move.
+         */
         public void otherPlayerMoved(int location) {
             output.println("OPPONENT_MOVED " + location);
             output.println(
                     hasWinner() ? "DEFEAT" : boardFilledUp() ? "TIE" : "");
         }
 
+        /**
+         * The player's main execution loop.
+         */
         public void run() {
             try {
                 output.println("MESSAGE All players connected");
@@ -102,7 +147,7 @@ public class Game {
             } catch (IOException e) {
                 System.out.println("Player died: " + e);
             } finally {
-                try {socket.close();} catch (IOException e) {}
+                try { socket.close(); } catch (IOException e) {}
             }
         }
     }

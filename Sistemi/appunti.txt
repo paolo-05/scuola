@@ -1,0 +1,106 @@
+IP: 192.168.1.1/24
+
+username: Administrator
+password: Paolo2005.
+
+porta DNS: 53
+
+formato NTFS livello minimo per avere sicurezza Active Directory
+
+Appunti, come trasformare un pc in un server:
+
+dobbiamo installare alcuni servizi per la sicurezza.
+
+AUTHC chi sei => protocollo standard Kerberos
+AUTHZ cosa puoi fare => protocollo LDAP
+
+Active Directory
+
+Ruolo: servizio principale
+Funzionalità: servizi aggiuntivi
+
+LDAP organizza informazioni ad albero come il DNS.
+
+3 principali caratteristiche Active Directory:
+
+- Organizzazione gerarchica con a capo root, unità organizzative
+- Organizzazione ad oggetti, un oggetto è qualsiasi elemento che fa delle azioni ed ha delle proprietà es. utente, pc, ecc
+- Sincronizzazione multi-master, nessun capo hardware, ci possono essere più server con active directory
+
+
+Foresta: più alberi di Microsoft allo stesso livello
+
+SYSVOL è una cartella condivisa in rete con all'interno gli oggetti di AD criptati
+
+
+MMC microsoft managment console
+
+risorse active directory protette dalla cancellazione
+
+
+record dns più imp NS e SOA
+
+
+ACL regole di accesso per cartella condivisa "repository"
+
+ACL collidono => vale sempre la più restrittiva
+
+
+ACL legate allo stato software, chi è in rete vede i pacchetti si comporta allo stesso modo per ogni tipo di disco.
+
+chi comanda però sono le regole sul disco
+
+system, gruppo usato per esigenze IPC, inter process comunication
+
+
+esecuzione cartella => entrare nella cartella
+controllo completo, può modificare ACL cartella 
+
+chi fa cosa / cosa vieto a chi. si può fare anche un mix.
+
+interropere eriditarietà: sicurezza-> avanzate
+
+
+NUOVO CLIENT
+1 - installazione win10
+
+decidere chi usa il pc, se no password -> amministratore
+utente administrator disattivo
+
+profilo locale -> membro di administrators
+administrator (senza password) bloccato per aumentare la sicurezza
+
+
+Account disponibile senza rete:
+username: Mario
+password: Mario
+
+
+unico modo per inserire pc nel dominio AC è farlo dal client
+
+workgroup gruppo di lavoro alla pari: no server
+
+il ping client-server va senza problemi
+il ping server-client non va per via del firewall
+
+
+
+profilo roaming se esistono vengno presi dal server i dati, alla fine della sessione i dati vengono sicnronizzati, non viene messo nella cartella da noi creata ma in una cartella dove nemmeno l'amministratore di dominio può accederci-> modifica ACL
+amministratore -> diventa proprietario, applicare questa proprietà a tutte le sottocartelle, riaggiungere l'utente 
+
+
+
+GPO group policy object / regole di sicurezza
+due oggetti standart
+Gerarchia -> ereditarietà regole con possibilità di regole più restrittive
+
+non conviene toccare oggetti standart, rischio di fare danni. Creare un nuovo oggetto e applicarlo alla rete in modo gerarchico.
+Creazione di una nuova Policy, per applicarla all'azienda trascino l'oggetto in Azienda+
+le regole vengono copiate dal server al client e applicate in modo gerarchico
+
+TUTTE LE REGOLE SONO MEMORIZZATE NELLA CARTELLA <<SYSVOL>>
+Utenti già collegati ma voglio cambiare policy, problema di sincronizzazione, avverrà nella prossima connessione a meno di forzamenti da parte dell'amministratore tramite <<gpupdate>>, altrimenti la notifica avviene ad un tempo non conosciuto random
+
+DHCP, parametri imp. IP subnet mask, server dns
+
+RFC request for comment nel DHCP ci saranno i parametri distribuiti numerati

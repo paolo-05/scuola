@@ -1,0 +1,3 @@
+1) Il gruppo Everyone ha pieno controllo sulla cartella repository, ovvero può cancellarla, leggerne il contenuto e creare dei file
+2) 5 ACL. Cartella locale, non si sa che tipo di computer. Siamo in AC, perché l'utente appartiene a un dominio e Administrators appartiene a un dominio NET bios. In questo caso Everyone il gruppo Everyone non può né accedere alla cartella né modificarla, per vedere questa cartella è necessario essere l'utente.  SYSTEM e CREATOR OWNER sono ACL standart di sistema. CREATOR OWNER ha un'autorizzazione speciale. In questa cartella NON ENTRA NESSUNO. la prima spunta conferma quanto c'è scritto nella colonna dell'ereditarietà, 
+3) 

@@ -1,0 +1,11 @@
+1) devo  andare su visualizzatore eventi.
+	- per gli accessi: Registri di Windows\Sicurezza -> categoria attività "Kerberos Auth. Service" e "Kerberos Service 		Ticket Operations".
+	- per la verifica dell'avvio/riavvio del sistema Registri di Windows\Sistema
+2) gestione attività \ servizi
+3) gestione attività \ prestazioni \ monitoraggio risorse
+4) devo abilitare la possibilità di connettermi al server da altri pc, attraverso il Server Manager, da win10 mi connetto al server, ma possibile anche fare al contrario
+5) c:\Users\
+6) gestione dispositivi	\ periferica \ proprietà \ dettagli
+	anche nel registro di sistema (è ad albero), ogni programma accede e modifca queste voci
+	Computer\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Enum\PCI -> per avere elenco periferiche PCI express
+7) 

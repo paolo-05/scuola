@@ -6,11 +6,10 @@ import java.rmi.registry.Registry;
 public class RMIServer {
     public static void main(String[] args) {
         try {
-            PresentationService presentationService = new PresentationService();
-            Registry registry = LocateRegistry.createRegistry(1099);
-            registry.rebind("PresentationService", presentationService);
-
-            System.out.println("RMI Server started.");
+            LocateRegistry.createRegistry(1099);
+            System.out.println("RMI server started");
+            while (true) {
+            }
         } catch (Exception e) {
             e.printStackTrace();
         }

@@ -1,0 +1,25 @@
+usr	psw
+root 	Root
+paolo 	Paolo2005
+
+HOSTNAME paolo-deb12gw
+
+da verificare? nano /et/resolv.conf
+
+
+Forwarding: di default disabilitato. Modificare la tabella di routing. 
+
+Routing
+
+Natting
+
+-> in andata source natting.
+-> al ritorno destination natting.
+
+
+setup:
+1- modifica del file /etc/hostname
+2- modifica del file /etc/network/interfaces 
+	debian chiama le schede 3 e 8
+
+	il parser tiene buoni tutti i comandi fino al prossimo iface

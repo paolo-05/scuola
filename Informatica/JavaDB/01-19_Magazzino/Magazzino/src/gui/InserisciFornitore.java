@@ -1,19 +1,24 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
+ * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package gui;
+
+import db.DatabaseHandler;
+import javax.swing.JOptionPane;
 
 /**
  *
  * @author paolo
  */
-public class InserisciFornitore extends javax.swing.JPanel {
+public class InserisciFornitore extends javax.swing.JFrame {
+    DatabaseHandler db;
 
     /**
      * Creates new form InserisciFornitore
      */
-    public InserisciFornitore() {
+    public InserisciFornitore(DatabaseHandler db) {
+        this.db = db;
         initComponents();
     }
 
@@ -28,72 +33,121 @@ public class InserisciFornitore extends javax.swing.JPanel {
 
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        txtNome = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        txtNome = new javax.swing.JTextField();
         txtCitta = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
+        btnAdd = new javax.swing.JButton();
+        btnSvuota = new javax.swing.JButton();
 
-        jLabel1.setText("Nome");
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
-        jLabel2.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setText("Inserimento Fornitori");
+        jLabel1.setFont(new java.awt.Font("Liberation Sans", 3, 20)); // NOI18N
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("Inserimento Fornitore");
 
-        jLabel3.setText("Città");
+        jLabel2.setText("Città fornitore");
 
-        jButton1.setFont(new java.awt.Font("Liberation Sans", 0, 24)); // NOI18N
-        jButton1.setText("Inserisci");
+        jLabel3.setText("Nome fornitore");
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
+        jLabel4.setFont(new java.awt.Font("Liberation Sans", 0, 12)); // NOI18N
+        jLabel4.setText("una volta finito di inserire, esci cliccando la X sopra");
+
+        btnAdd.setFont(new java.awt.Font("Liberation Sans", 0, 18)); // NOI18N
+        btnAdd.setText("Inserisci");
+        btnAdd.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnAddMouseClicked(evt);
+            }
+        });
+
+        btnSvuota.setFont(new java.awt.Font("Liberation Sans", 0, 10)); // NOI18N
+        btnSvuota.setText("Svuota");
+        btnSvuota.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnSvuotaMouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(48, 48, 48)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnAdd, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel3)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(txtCitta, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 115, Short.MAX_VALUE)
-                        .addComponent(txtNome, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(41, 41, 41))
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(btnSvuota)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jLabel2)
+                                        .addComponent(jLabel3))
+                                    .addGap(52, 52, 52)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(txtNome)
+                                        .addComponent(txtCitta, javax.swing.GroupLayout.DEFAULT_SIZE, 155, Short.MAX_VALUE))))
+                            .addComponent(jLabel4))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(txtNome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(33, 33, 33)
+                .addContainerGap(19, Short.MAX_VALUE)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 20, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
-                    .addComponent(txtCitta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 64, Short.MAX_VALUE)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(42, 42, 42))
+                    .addComponent(txtNome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(txtCitta, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(4, 4, 4)
+                .addComponent(btnSvuota)
+                .addGap(18, 18, 18)
+                .addComponent(btnAdd)
+                .addGap(5, 5, 5)
+                .addComponent(jLabel4)
+                .addContainerGap())
         );
+
+        pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void btnSvuotaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnSvuotaMouseClicked
+       txtCitta.setText("");
+       txtNome.setText("");
+    }//GEN-LAST:event_btnSvuotaMouseClicked
+
+    private void btnAddMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAddMouseClicked
+        String nome = txtNome.getText();
+        String citta = txtCitta.getText();
+        
+        if(citta.equals("") || nome.equals("")){
+            JOptionPane.showMessageDialog(this, "Compila i campi poi invia", "Errore", 0);
+            return;
+        }
+        
+        try{
+            db.insertSupplier(nome, citta); 
+            JOptionPane.showMessageDialog(this, "Fornitore inserito correttamente", "Successo", 1);
+        } catch (Exception e){
+           JOptionPane.showMessageDialog(this, "Errore nell'inserimento", "Errore", 0); 
+        }      
+    }//GEN-LAST:event_btnAddMouseClicked
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton btnAdd;
+    private javax.swing.JButton btnSvuota;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JTextField txtCitta;
     private javax.swing.JTextField txtNome;
     // End of variables declaration//GEN-END:variables

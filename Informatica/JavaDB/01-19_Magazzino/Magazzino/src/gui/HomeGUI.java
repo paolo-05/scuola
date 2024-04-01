@@ -1,5 +1,6 @@
 package gui;
 
+import db.DatabaseHandler;
 import javax.swing.JOptionPane;
 
 /*
@@ -12,11 +13,14 @@ import javax.swing.JOptionPane;
  * @author paolo
  */
 public class HomeGUI extends javax.swing.JFrame {
+    
+    DatabaseHandler db;
 
     /**
      * Creates new form HomeGUI
      */
     public HomeGUI() {
+         db = new DatabaseHandler();
         initComponents();
     }
 
@@ -38,9 +42,8 @@ public class HomeGUI extends javax.swing.JFrame {
         btnMostraMovimenti = new javax.swing.JButton();
         btnEsci = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setName("main"); // NOI18N
-        setPreferredSize(new java.awt.Dimension(600, 400));
         setResizable(false);
 
         title.setFont(new java.awt.Font("Liberation Sans", 1, 24)); // NOI18N
@@ -51,12 +54,27 @@ public class HomeGUI extends javax.swing.JFrame {
         actions.setLayout(new java.awt.GridLayout(2, 3, 10, 10));
 
         btnFornitori.setText("Inserisci Fornitore");
+        btnFornitori.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnFornitoriMouseClicked(evt);
+            }
+        });
         actions.add(btnFornitori);
 
         btnProdotti.setText("Inserisci Prodotti");
+        btnProdotti.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnProdottiMouseClicked(evt);
+            }
+        });
         actions.add(btnProdotti);
 
         btnMovimenti.setText("Inserisci Movimenti");
+        btnMovimenti.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnMovimentiMouseClicked(evt);
+            }
+        });
         actions.add(btnMovimenti);
 
         btnGiacenza.setText("Giacenza Attuale");
@@ -102,6 +120,21 @@ public class HomeGUI extends javax.swing.JFrame {
     private void btnEsciActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEsciActionPerformed
         confermaUscita();
     }//GEN-LAST:event_btnEsciActionPerformed
+
+    private void btnFornitoriMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnFornitoriMouseClicked
+       InserisciFornitore iFpanel = new InserisciFornitore(db);
+       iFpanel.setVisible(true);
+    }//GEN-LAST:event_btnFornitoriMouseClicked
+
+    private void btnProdottiMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnProdottiMouseClicked
+        InserisciProdotto iPpanel = new InserisciProdotto(db);
+        iPpanel.setVisible(true);
+    }//GEN-LAST:event_btnProdottiMouseClicked
+
+    private void btnMovimentiMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnMovimentiMouseClicked
+        InserisciMovimento iMpanel = new InserisciMovimento(db);
+        iMpanel.setVisible(true);
+    }//GEN-LAST:event_btnMovimentiMouseClicked
 
     private void confermaUscita() {
         int choice = JOptionPane.showConfirmDialog(this,

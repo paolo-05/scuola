@@ -22,7 +22,7 @@ public class Main extends JFrame {
       Class.forName("com.mysql.cj.jdbc.Driver");
 
       // Crea la connessione al database
-      Connection con = DriverManager.getConnection("jdbc:mysql://localhost:8889/northwind", "root", "root");
+      Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/northwind", "root", "PasswordRoot");
 
       // Crea un oggetto Statement per eseguire una query
       Statement stmt = con.createStatement();

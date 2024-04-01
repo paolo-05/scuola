@@ -1,3 +1,5 @@
+package db;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
@@ -47,11 +49,46 @@ public class DatabaseHandler {
         executeUpdate(query, nome, prezzo, codForn);
     }
 
-    public void insertMovement(String data, String tipo, int quantita, int codProd) {
+    public void insertMovement(Timestamp data, String tipo, int quantita, int codProd) {
         String query = "INSERT INTO movimenti (Data, Tipo, Quantita, CodProd) VALUES (?, ?, ?, ?)";
         executeUpdate(query, data, tipo, quantita, codProd);
     }
+    
+   public HashMap<Integer, String> getFornitori() {
+        HashMap<Integer, String> fornitoriMap = new HashMap<>();
+        String query = "SELECT CodForn, Nome FROM fornitori";
 
+        try (ResultSet resultSet = executeQuery(query)) {
+            while (resultSet.next()) {
+                int codForn = resultSet.getInt("CodForn");
+                String nome = resultSet.getString("Nome");
+                fornitoriMap.put(codForn, nome);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return fornitoriMap;
+    } 
+   
+    public HashMap<Integer, String> getProdotti() {
+        HashMap<Integer, String> prodottiMap = new HashMap<>();
+        String query = "SELECT CodProd, Nome FROM prodotti";
+
+        try (ResultSet resultSet = executeQuery(query)) {
+            while (resultSet.next()) {
+                int codProd = resultSet.getInt("CodProd");
+                String nome = resultSet.getString("Nome");
+                prodottiMap.put(codProd, nome);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return prodottiMap;
+    } 
+
+    
     public HashMap<Integer, Integer> getCurrentStock() {
         HashMap<Integer, Integer> stockMap = new HashMap<>();
         String query = "SELECT CodProd, SUM(CASE WHEN Tipo = 'Carico' THEN Quantita ELSE -Quantita END) AS Giacenza " +
@@ -79,16 +116,22 @@ public class DatabaseHandler {
         }
     }
 
-    private ResultSet executeQuery(String query, Object... parameters) {
+   private ResultSet executeQuery(String query, Object... parameters) {
         ResultSet resultSet = null;
-        try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(query);
             setParameters(preparedStatement, parameters);
             resultSet = preparedStatement.executeQuery();
+
+            // Do not close the PreparedStatement here
         } catch (SQLException e) {
             e.printStackTrace();
         }
+
+        // Return the ResultSet to be closed later
         return resultSet;
     }
+
 
      private int executeUpdate(String query, Object... parameters) {
         int rowsAffected = 0;
